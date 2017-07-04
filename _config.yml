@@ -1,0 +1,69 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title: VeereshElango
+email: ecveer@gmail.com
+description: Data Scientist & Developer
+url: https://veereshelango.github.io
+
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Europe/Paris
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: Veeresh Elango
+  avatar: 450_600.jpg
+  job: "Data Science Master's Student"
+  bio: "Deep Learning Enthusiast and Loves to Teach "
+  email: ecveer@gmail.com
+  disqus-shortname:
+  twitter: veereshelango
+  facebook: veereshelango
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: veereshelango
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: veereshelango
+  skype: #username
+  xing: #username
+  instagram: veereshelango
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username

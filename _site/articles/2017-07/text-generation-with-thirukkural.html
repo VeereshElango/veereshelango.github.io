@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Can Machine write Thirukkural ?</title>
+  <meta name="description" content="Character level LSTM Model trained to learn Thirukkural literature and fed with single word to write more kural.">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+
+  <link rel="canonical" href="http://localhost:4000/articles/2017-07/text-generation-with-thirukkural">
+  <link rel="alternate" type="application/rss+xml" title="VeereshElango" href="http://localhost:4000/feed.xml" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-middle">
+  
+  <img src="http://localhost:4000/img/450_600.jpg" alt="" class="avatar">
+  
+  <a href="http://localhost:4000/" class="author_name">Veeresh Elango</a>
+  <span class="author_job">Data Science Master's Student</span>
+  <span class="author_bio mbm">Deep Learning Enthusiast and Loves to Teach </span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="http://localhost:4000/">home</a>
+      </li>
+       
+      <li class="nav-item">
+        <a href="http://localhost:4000/about/">About</a>
+      </li>
+        
+      <li class="nav-item">
+        <a href="http://localhost:4000/archive/">Archive</a>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://localhost:4000/categories/">Categories</a>
+      </li>
+            
+      <li class="nav-item">
+        <a href="http://localhost:4000/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <script type="text/javascript">
+  // based on http://stackoverflow.com/a/10300743/280842
+  function gen_mail_to_link(hs, subject) {
+    var lhs,rhs;
+    var p = hs.split('@');
+    lhs = p[0];
+    rhs = p[1];
+    document.write("<a class=\"social-link-item\" target=\"_blank\" href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "?subject=" + subject + "\"><i class=\"fa fa-fw fa-envelope\"></i><\/a>");
+  }
+</script>
+<div class="social-links">
+  <ul>
+    
+      <li>
+      <script>gen_mail_to_link('ecveer@gmail.com', 'Hello from website');</script>
+      </li>
+    
+    <li><a href="http://twitter.com/veereshelango" class="social-link-item" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
+    <li><a href="http://facebook.com/veereshelango" class="social-link-item" target="_blank"><i class="fa fa-fw fa-facebook"></i></a></li>
+    
+    <li><a href="http://linkedin.com/in/veereshelango" class="social-link-item" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a></li>
+    
+    
+    <li><a href="http://instagram.com/veereshelango" class="social-link-item" target="_blank"><i class="fa fa-fw fa-instagram"></i></a></li>
+    
+    <li><a href="http://github.com/veereshelango" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <a class="btn" href= "http://localhost:4000/" >
+  Home
+</a>
+
+<div class="post-image-feature">
+  <img class="feature-image" src=
+  
+  "https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250"
+  
+  alt="Can Machine write Thirukkural ? feature image">
+
+  
+  <span class="image-credit">Photo Credit: <a href="https://unsplash.com/photos/Ki0dpxd3LGc">thomas shellberg</a></span>
+  
+</div><!-- /.image-wrap -->
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Can Machine write Thirukkural ?">Can Machine write Thirukkural ?</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        2 JUL 2017
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    3 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>Inspired by Andrej Karpathy’s blog post <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a>, I was super excited to apply the LSTM and see the results on a different dataset.</p>
+
+<p>Before we dive in I thought to give a simple intro to RNN and LSTM.</p>
+
+<h2 id="short-intro-about-rnn-and-lstm">Short intro about RNN and LSTM</h2>
+<p>Recurrent Neural Network is a neural network model in which each hidden layer receives both input from the previous layer and 
+input from itself at each step. This enables it to hold information across inputs which can be thought as a memory.</p>
+
+<p>The problem of Recurrent Neural Network is that its memory is very short term.
+This is solved in Long Short Term Memory networks (LSTM).</p>
+
+<p>Long Short Term Memory (LSTM) networks are capable of learning long-term dependencies. 
+LSTM has a cell state which runs through all the modules of the neural network.
+The cell state is very easy for the information to flow along it unchanged.
+There are four gates which regulate the addition and removal of information from the cell state.</p>
+
+<p>For further understanding about this neural networks, check the <a href="#references">references</a>.</p>
+
+<h2 id="about-dataset---thriukkural">About Dataset - Thriukkural</h2>
+<p><a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7">Thirukkural</a> is one of the most prominent and celebrated works in Tamil Literature. It is also one of the
+most widely translated non-religious works in the world.
+It is written by the poet <a href="https://en.wikipedia.org/wiki/Thiruvalluvar">Thiruvalluvar</a> who lived in the 6th century. It is a unique ethical guide which delivers code of 
+ conduct to the mankind to follow for all time to come. 
+In total, there are 1330 couplets which are divided into 133 sections with 10 couplets each.
+Each couplet has exactly 7 words, 4 in one line and 3 in next.</p>
+
+<h2 id="why-this-dataset">Why this dataset?</h2>
+<p>Since childhood, I was admired how he expresses great morals in just 7 words.
+ He wrote only 1330 couplets which almost delivers all the essential morals
+   for a person to lead a successful life.
+This provoked the curiosity within me to know how it would be if Thiruvalluvar has written more Thirukkural.
+   Crazy thought !!</p>
+
+<h2 id="about-the-model">About the model</h2>
+<p>The model is built using Keras framework. It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
+data of 1330 couplets with each of 7 words, in total 9310 words. 
+The model is trained for 20 iterations.</p>
+
+<h2 id="results">Results</h2>
+
+<p>The results definitely show Thiruvalluvar cannot be replaced by Machine anytime soon. But if you notice the results, astonishedly the 
+machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I was also amazed that how this 
+  simple model learn the syntax of Thirukkural such as nearly four words in the first line and three words in the 
+  second line.</p>
+
+<p>Start Word : “சாதலின் “</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>சாதலின் இல்லாய் நினிபன் பெருந்தகை 
+சிலையார் யாணென்னும் பயர்.
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>சாதலின்ற் பொருட்செல்வம் தாண்டற்றும் மருந்து 
+கேணல் சிறப்பின் இரந்து.
+</code></pre>
+</div>
+<p>Start Word : “   காதல்”</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>காதல்ல்லாது செய்யார் முன்றி தீயும் 
+அருவியல் போர் கேது.
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>காதல்டு யாதெனின் நெஞ்சத்தான் கண்ணுடையார் க
+ேதலிற் கொள்வாரோட்க்கு விருந்து.
+</code></pre>
+</div>
+<p>Start Word : “  காமம் “</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>காமம்ன்தும் இடும்பை பஇடைச் சிறப்பின் இரவுருமாடு 
+ஒரிவது குறவினும் பெறும்.
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>காமம்ணிடும் பெறுப்சின் செய்யும் அவர்தென்பீர் 
+கண்ட செல்வம் தரும்.
+</code></pre>
+</div>
+
+<p>Start Word : “ இறைவன் “</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>இறைவன் பத் தலையபின் துணையாகை 
+நீக்கிக் காமந்த நூர்.
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>இறைவன் முன்றினும் உய்வாத்தல் இருவறுப் 
+துணையாது விழைந்து விடல்.
+</code></pre>
+</div>
+
+<p>Start Word : “  ஒழுக்க”</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ஒழுக்கத் தலையபின் துணையாது நீங்கி 
+விருமுங்க்கல்ல செய்யார் மாத்து.
+</code></pre>
+</div>
+
+<p>Start Word : “ உயர்ந்த”</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>உயர்ந்த தஒழில் தூழ்கச் சிறப்பின் 
+இரந்தவற்று விகர்முடியார் அனைத்து.
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>உயர்ந்த யஇருள் நோக்கெச் சுடைத்து வேநீால் 
+வடிவார் என்றார் அனைத்து.
+</code></pre>
+</div>
+
+<p>Start Word : “ பெருமை “</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>பெருமை எய்தார் முற்றியது எண்ணிக் 
+கூடியமை என்னும் செருக்கு.
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>பெருமை கூற்றம் காதல் அல்லசெய்தல் 
+இன்னை அருமாப் படும்.
+</code></pre>
+</div>
+
+<h2 id="references">References</h2>
+<h4 id="rnnlstm">RNN/LSTM</h4>
+<ul>
+  <li><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a></li>
+  <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a></li>
+  <li><a href="https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/">Anyone Can Learn To Code an LSTM-RNN in Python (Part 1: RNN)</a></li>
+  <li><a href="https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714">Understanding LSTM and its diagrams</a></li>
+  <li><a href="http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/">Composing Music With Recurrent Neural Networks</a></li>
+</ul>
+
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2017-07/text-generation-with-thirukkural" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2017-07/text-generation-with-thirukkural" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2017-07/text-generation-with-thirukkural" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/articles/2017-07/text-generation-with-thirukkural" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://localhost:4000/articles/2017-07/text-generation-with-thirukkural" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+        <footer>
+  &copy; 2017 Veeresh Elango. Powered by <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://github.com/renyuanz/leonids/">leonids theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://localhost:4000/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://localhost:4000/js/main.js"></script>
+
+
+</body>
+</html>
