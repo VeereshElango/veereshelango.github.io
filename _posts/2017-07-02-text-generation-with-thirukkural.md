@@ -50,12 +50,14 @@ The model is built using Keras framework. It is a simple model with single LSTM 
 data of 1330 couplets with each of 7 words, in total 9310 words. 
 The model is trained for 20 iterations. 
 
+The code is available [here](https://github.com/VeereshElango/text_generation_thirukkural).
+
 ## Results
 
 The results definitely show Thiruvalluvar cannot be replaced by Machine anytime soon. But if you notice the results, astonishedly the 
 machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I was also amazed that how this 
   simple model learn the syntax of Thirukkural such as nearly four words in the first line and three words in the 
-  second line.
+  second line. 
 
 Start Word : "சாதலின் "
 ```
