@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Can Machine write Thirukkural ?
-excerpt: "Character level LSTM Model trained to learn Thirukkural literature and fed with single word to write more kural."
+excerpt: "A Character level LSTM Model has been trained to learn Thirukkural literature and made to write poem with a given starting word."
 categories: [LSTM]
 comments: true
 image:
@@ -22,10 +22,13 @@ input from itself at each step. This enables it to hold information across input
 The problem of Recurrent Neural Network is that its memory is very short term.
 This is solved in Long Short Term Memory networks (LSTM).
 
-Long Short Term Memory (LSTM) networks are capable of learning long-term dependencies. 
+Long Short Term Memory (LSTM) networks are kind of recurrent neural network which are capable of learning long-term dependencies. 
 LSTM has a cell state which runs through all the modules of the neural network.
 The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.
+
+As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
+ The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and ever writing bible.
 
 For further understanding about this neural networks, check the [references](#references).
 
@@ -46,7 +49,13 @@ This provoked the curiosity within me to know how it would be if Thiruvalluvar h
    Crazy thought !! 
 
 ## About the model
-The model is built using Keras framework. It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
+The first step is to create the dataset. I found a Thirukkural literature in json format. I parsed the json file
+ and created a text file with 1330 couplets alone.
+ 
+The next step is to fed this file as input to LSTM model. I took the sample
+[code](https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py) from Keras Github repository and made changes to adapt to this dataset.
+
+It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
 data of 1330 couplets with each of 7 words, in total 9310 words. 
 The model is trained for 20 iterations. 
 
@@ -130,4 +139,6 @@ Start Word : " பெருமை "
 * [Anyone Can Learn To Code an LSTM-RNN in Python (Part 1: RNN)](https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/)
 * [Understanding LSTM and its diagrams](https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714)
 * [Composing Music With Recurrent Neural Networks](http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/)
-
+#### Thirukkural
+* [Thirukkural - by Britannica](https://www.britannica.com/topic/Tirukkural)
+* [Thirukkural - by Wikipedia](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&sqi=2&ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg)

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Can Machine write Thirukkural ?</title>
-  <meta name="description" content="Character level LSTM Model trained to learn Thirukkural literature and fed with single word to write more kural.">
+  <meta name="description" content="A Character level LSTM Model has been trained to learn Thirukkural literature and made to write poem with a given starting word.">
 
   <!-- CSS files -->
   <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
@@ -140,7 +140,7 @@
       <span class="read-time" title="Estimated read time">
   
   
-    3 mins read
+    4 mins read
   
 </span>
 
@@ -160,10 +160,13 @@ input from itself at each step. This enables it to hold information across input
 <p>The problem of Recurrent Neural Network is that its memory is very short term.
 This is solved in Long Short Term Memory networks (LSTM).</p>
 
-<p>Long Short Term Memory (LSTM) networks are capable of learning long-term dependencies. 
+<p>Long Short Term Memory (LSTM) networks are kind of recurrent neural network which are capable of learning long-term dependencies. 
 LSTM has a cell state which runs through all the modules of the neural network.
 The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.</p>
+
+<p>As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
+ The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and ever writing bible.</p>
 
 <p>For further understanding about this neural networks, check the <a href="#references">references</a>.</p>
 
@@ -183,9 +186,17 @@ This provoked the curiosity within me to know how it would be if Thiruvalluvar h
    Crazy thought !!</p>
 
 <h2 id="about-the-model">About the model</h2>
-<p>The model is built using Keras framework. It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
+<p>The first step is to create the dataset. I found a Thirukkural literature in json format. I parsed the json file
+ and created a text file with 1330 couplets alone.</p>
+
+<p>The next step is to fed this file as input to LSTM model. I took the sample
+<a href="https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py">code</a> from Keras Github repository and made changes to adapt to this dataset.</p>
+
+<p>It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
 data of 1330 couplets with each of 7 words, in total 9310 words. 
 The model is trained for 20 iterations.</p>
+
+<p>The code is available <a href="https://github.com/VeereshElango/text_generation_thirukkural">here</a>.</p>
 
 <h2 id="results">Results</h2>
 
@@ -265,9 +276,12 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
   <li><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a></li>
   <li><a href="https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/">Anyone Can Learn To Code an LSTM-RNN in Python (Part 1: RNN)</a></li>
   <li><a href="https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714">Understanding LSTM and its diagrams</a></li>
-  <li><a href="http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/">Composing Music With Recurrent Neural Networks</a></li>
+  <li><a href="http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/">Composing Music With Recurrent Neural Networks</a>
+    <h4 id="thirukkural">Thirukkural</h4>
+  </li>
+  <li><a href="https://www.britannica.com/topic/Tirukkural">Thirukkural - by Britannica</a></li>
+  <li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;uact=8&amp;sqi=2&amp;ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&amp;usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg">Thirukkural - by Wikipedia</a></li>
 </ul>
-
 
   </article>
 </div>
