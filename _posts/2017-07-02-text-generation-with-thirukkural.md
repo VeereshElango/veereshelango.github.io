@@ -69,7 +69,6 @@ The first step is to create the dataset. I found a Thirukkural literature in jso
  
 The next step is to fed this file as input to LSTM model. I took the sample
 [code](https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py) from Keras Github repository and made changes to adapt to this dataset.
-
 It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
 data of 1330 couplets with each of 7 words, in total 9310 words. 
 The model is trained for 20 iterations. 

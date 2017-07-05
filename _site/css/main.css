@@ -1110,7 +1110,8 @@ small,
 p {
   margin: 1.2em 0;
   word-spacing: 0.05em;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  text-align: justify; }
 
 /* Buttons
    ========================================================================== */
@@ -1442,7 +1443,7 @@ pre code {
 
 /* LAYOUT CSS */
 .cover {
-  background-color: #e5e5e5;
+  background-color: #efefef;
   position: fixed;
   text-align: center;
   width: 100%;
@@ -1568,7 +1569,7 @@ ul.tag-cloud {
     left: -2px;
     height: 100%;
     width: 4px;
-    background: #e5e5e5; }
+    background: #efefef; }
   .archive #timeline:after {
     content: "";
     display: table;

@@ -5,8 +5,8 @@
     <description>Data Scientist &amp; Developer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Jul 2017 18:29:39 +0200</pubDate>
-    <lastBuildDate>Wed, 05 Jul 2017 18:29:39 +0200</lastBuildDate>
+    <pubDate>Wed, 05 Jul 2017 18:59:44 +0200</pubDate>
+    <lastBuildDate>Wed, 05 Jul 2017 18:59:44 +0200</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -67,9 +67,8 @@ This provoked the curiosity within me to know how it would be if Thiruvalluvar h
  and created a text file with 1330 couplets alone.&lt;/p&gt;
 
 &lt;p&gt;The next step is to fed this file as input to LSTM model. I took the sample
-&lt;a href=&quot;https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py&quot;&gt;code&lt;/a&gt; from Keras Github repository and made changes to adapt to this dataset.&lt;/p&gt;
-
-&lt;p&gt;It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
+&lt;a href=&quot;https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py&quot;&gt;code&lt;/a&gt; from Keras Github repository and made changes to adapt to this dataset.
+It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
 data of 1330 couplets with each of 7 words, in total 9310 words. 
 The model is trained for 20 iterations.&lt;/p&gt;
 
