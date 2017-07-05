@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Can Machine write Thirukkural ?</title>
-  <meta name="description" content="A Character level LSTM Model has been trained to learn Thirukkural literature and made to write poem with a given starting word.">
+  <meta name="description" content="A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word.">
 
   <!-- CSS files -->
   <link rel="stylesheet" href="http://localhost:4000/css/font-awesome.min.css">
@@ -140,7 +140,7 @@
       <span class="read-time" title="Estimated read time">
   
   
-    4 mins read
+    5 mins read
   
 </span>
 
@@ -149,7 +149,11 @@
   </header>
 
   <article class="post-content">
-    <p>Inspired by Andrej Karpathy’s blog post <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a>, I was super excited to apply the LSTM and see the results on a different dataset.</p>
+    <p>Inspired by Andrej Karpathy’s blog post <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a>, I was super excited to apply the LSTM and see the results on a different dataset.
+Finally, I chose the poem <a href="(https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)">Thirukkural</a> from one of the oldest surviving language called <a href="https://en.wikipedia.org/wiki/Tamil_language">Tamil</a>.</p>
+
+<p>The goal of this attempt is to create a neural network model which learns the style of Thirukkural
+poem and writes poem following the same style for a given starting word.</p>
 
 <p>Before we dive in I thought to give a simple intro to RNN and LSTM.</p>
 
@@ -166,20 +170,31 @@ The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.</p>
 
 <p>As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
- The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing bible.</p>
+ The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing The Bible.</p>
 
 <p>For further understanding about this neural networks, check the <a href="#references">references</a>.</p>
 
-<h2 id="about-dataset---thriukkural">About Dataset - Thriukkural</h2>
+<h2 id="about-dataset---thirukkural">About Dataset - Thirukkural</h2>
 <p><a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7">Thirukkural</a> is one of the most prominent and celebrated works in Tamil Literature. It is also one of the
 most widely translated non-religious works in the world.
 It is written by the poet <a href="https://en.wikipedia.org/wiki/Thiruvalluvar">Thiruvalluvar</a> who lived in the 6th century. It is a unique ethical guide which delivers code of 
  conduct to the mankind to follow for all time to come. 
-In total, there are 1330 couplets which are divided into 133 sections with 10 couplets each.
+In total, there are 1330 couplets (two lines joined by rhyme) which are divided into 133 sections with 10 couplets each.
 Each couplet has exactly 7 words, 4 in one line and 3 in next.</p>
 
+<p>Example couplet from Thirukkural (no : 78)</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>அன்பகத் தில்லா உயிர்வாழ்க்கை வன்பாற்கண்
+வற்றல் மரந்தளிர்த் தற்று
+</code></pre>
+</div>
+<p>Explanation in English would be</p>
+<div class="highlighter-rouge"><pre class="highlight"><code> Without love in the heart, 
+ Life is like a sapless tree in a barren desert. 
+
+</code></pre>
+</div>
 <h2 id="why-this-dataset">Why this dataset?</h2>
-<p>Since childhood, I was admired how he expresses great morals in just 7 words.
+<p>Since childhood, I admired how he expresses great morals in just 7 words.
  He wrote only 1330 couplets which almost delivers all the essential morals
    for a person to lead a successful life.
 This provoked the curiosity within me to know how it would be if Thiruvalluvar has written more Thirukkural.

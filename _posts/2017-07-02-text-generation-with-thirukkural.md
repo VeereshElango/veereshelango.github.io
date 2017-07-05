@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Can Machine write Thirukkural ?
-excerpt: "A Character level LSTM Model has been trained to learn Thirukkural literature and made to write poem with a given starting word."
+excerpt: "A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word."
 categories: [LSTM]
 comments: true
 image:
@@ -12,6 +12,10 @@ image:
 
 
 Inspired by Andrej Karpathy's blog post [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/), I was super excited to apply the LSTM and see the results on a different dataset.
+Finally, I chose the poem [Thirukkural]((https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)) from one of the oldest surviving language called [Tamil](https://en.wikipedia.org/wiki/Tamil_language).
+
+The goal of this attempt is to create a neural network model which learns the style of Thirukkural
+poem and writes poem following the same style for a given starting word. 
 
 Before we dive in I thought to give a simple intro to RNN and LSTM. 
 
@@ -28,21 +32,32 @@ The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.
 
 As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
- The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing bible.
+ The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing The Bible.
 
 For further understanding about this neural networks, check the [references](#references).
 
 
-## About Dataset - Thriukkural
+## About Dataset - Thirukkural
 [Thirukkural](https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7) is one of the most prominent and celebrated works in Tamil Literature. It is also one of the
 most widely translated non-religious works in the world.
 It is written by the poet [Thiruvalluvar](https://en.wikipedia.org/wiki/Thiruvalluvar) who lived in the 6th century. It is a unique ethical guide which delivers code of 
  conduct to the mankind to follow for all time to come. 
-In total, there are 1330 couplets which are divided into 133 sections with 10 couplets each.
+In total, there are 1330 couplets (two lines joined by rhyme) which are divided into 133 sections with 10 couplets each.
 Each couplet has exactly 7 words, 4 in one line and 3 in next.
 
+Example couplet from Thirukkural (no : 78)
+```
+அன்பகத் தில்லா உயிர்வாழ்க்கை வன்பாற்கண்
+வற்றல் மரந்தளிர்த் தற்று
+```
+Explanation in English would be 
+```
+ Without love in the heart, 
+ Life is like a sapless tree in a barren desert. 
+
+```
 ## Why this dataset?
-Since childhood, I was admired how he expresses great morals in just 7 words.
+Since childhood, I admired how he expresses great morals in just 7 words.
  He wrote only 1330 couplets which almost delivers all the essential morals
    for a person to lead a successful life.
 This provoked the curiosity within me to know how it would be if Thiruvalluvar has written more Thirukkural.
