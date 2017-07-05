@@ -28,7 +28,7 @@ The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.
 
 As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
- The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and ever writing bible.
+ The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing bible.
 
 For further understanding about this neural networks, check the [references](#references).
 
@@ -139,6 +139,7 @@ Start Word : " பெருமை "
 * [Anyone Can Learn To Code an LSTM-RNN in Python (Part 1: RNN)](https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/)
 * [Understanding LSTM and its diagrams](https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714)
 * [Composing Music With Recurrent Neural Networks](http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/)
+
 #### Thirukkural
 * [Thirukkural - by Britannica](https://www.britannica.com/topic/Tirukkural)
 * [Thirukkural - by Wikipedia](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&sqi=2&ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg)

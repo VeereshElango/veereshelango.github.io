@@ -5,8 +5,8 @@
     <description>Data Scientist &amp; Developer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Jul 2017 14:08:45 +0200</pubDate>
-    <lastBuildDate>Wed, 05 Jul 2017 14:08:45 +0200</lastBuildDate>
+    <pubDate>Wed, 05 Jul 2017 14:13:12 +0200</pubDate>
+    <lastBuildDate>Wed, 05 Jul 2017 14:13:12 +0200</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -28,7 +28,7 @@ The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.&lt;/p&gt;
 
 &lt;p&gt;As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
- The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and ever writing bible.&lt;/p&gt;
+ The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing bible.&lt;/p&gt;
 
 &lt;p&gt;For further understanding about this neural networks, check the &lt;a href=&quot;#references&quot;&gt;references&lt;/a&gt;.&lt;/p&gt;
 
@@ -138,9 +138,11 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
   &lt;li&gt;&lt;a href=&quot;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;Understanding LSTM Networks&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/&quot;&gt;Anyone Can Learn To Code an LSTM-RNN in Python (Part 1: RNN)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714&quot;&gt;Understanding LSTM and its diagrams&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/&quot;&gt;Composing Music With Recurrent Neural Networks&lt;/a&gt;
-    &lt;h4 id=&quot;thirukkural&quot;&gt;Thirukkural&lt;/h4&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/&quot;&gt;Composing Music With Recurrent Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;thirukkural&quot;&gt;Thirukkural&lt;/h4&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.britannica.com/topic/Tirukkural&quot;&gt;Thirukkural - by Britannica&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=2&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;sqi=2&amp;amp;ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&amp;amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&amp;amp;usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg&quot;&gt;Thirukkural - by Wikipedia&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
