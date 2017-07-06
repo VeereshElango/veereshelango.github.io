@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Can Machine write Thirukkural ?
+title: Can a Machine write Thirukkural ?
 excerpt: "A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word."
 categories: [LSTM]
 comments: true
