@@ -4,6 +4,7 @@ title: Can a Machine write Thirukkural ?
 excerpt: "A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word."
 categories: [LSTM]
 comments: true
+tags: keras tamil lstm rnn 
 image:
   feature: https://unsplash.it/1250/475?image=1073
   credit: patrick tomasso
@@ -12,7 +13,7 @@ image:
 
 
 Inspired by Andrej Karpathy's blog post [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/), I was super excited to apply the LSTM and see the results on a different dataset.
-Finally, I chose the poem [Thirukkural]((https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)) from one of the oldest surviving language called [Tamil](https://en.wikipedia.org/wiki/Tamil_language).
+Finally, I chose the poem [Thirukkural]((https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)) from one of the oldest surviving languages called [Tamil](https://en.wikipedia.org/wiki/Tamil_language).
 
 The goal of this attempt is to create a neural network model which learns the style of Thirukkural
 poem and writes poem following the same style for a given starting word. 

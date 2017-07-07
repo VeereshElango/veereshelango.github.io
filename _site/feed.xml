@@ -5,14 +5,14 @@
     <description>Data Scientist &amp; Developer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Jul 2017 20:25:03 +0200</pubDate>
-    <lastBuildDate>Wed, 05 Jul 2017 20:25:03 +0200</lastBuildDate>
+    <pubDate>Fri, 07 Jul 2017 10:50:54 +0200</pubDate>
+    <lastBuildDate>Fri, 07 Jul 2017 10:50:54 +0200</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>Can Machine write Thirukkural ?</title>
+        <title>Can a Machine write Thirukkural ?</title>
         <description>&lt;p&gt;Inspired by Andrej Karpathy’s blog post &lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;, I was super excited to apply the LSTM and see the results on a different dataset.
-Finally, I chose the poem &lt;a href=&quot;(https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)&quot;&gt;Thirukkural&lt;/a&gt; from one of the oldest surviving language called &lt;a href=&quot;https://en.wikipedia.org/wiki/Tamil_language&quot;&gt;Tamil&lt;/a&gt;.&lt;/p&gt;
+Finally, I chose the poem &lt;a href=&quot;(https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)&quot;&gt;Thirukkural&lt;/a&gt; from one of the oldest surviving languages called &lt;a href=&quot;https://en.wikipedia.org/wiki/Tamil_language&quot;&gt;Tamil&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The goal of this attempt is to create a neural network model which learns the style of Thirukkural
 poem and writes poem following the same style for a given starting word.&lt;/p&gt;
@@ -164,6 +164,14 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
         <pubDate>Sun, 02 Jul 2017 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/articles/2017-07/text-generation-with-thirukkural</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2017-07/text-generation-with-thirukkural</guid>
+        
+        <category>keras</category>
+        
+        <category>tamil</category>
+        
+        <category>lstm</category>
+        
+        <category>rnn</category>
         
         
         <category>LSTM</category>
