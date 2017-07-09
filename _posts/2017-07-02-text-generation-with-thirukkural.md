@@ -147,6 +147,9 @@ Start Word : " பெருமை "
 இன்னை அருமாப் படும்.
 ```
 
+## Take away
+* LSTM capable of holding information for long term, hence we can say it has memory 
+* LSTM networks are capable of modelling temporal aspects of data and hence have been used widely for text, videos, and time-series. 
 ## References 
 #### RNN/LSTM
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
@@ -158,3 +161,5 @@ Start Word : " பெருமை "
 #### Thirukkural
 * [Thirukkural - by Britannica](https://www.britannica.com/topic/Tirukkural)
 * [Thirukkural - by Wikipedia](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&sqi=2&ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg)
+
+**Note:** *If you liked this article, and would like to see more like this, all you have to do is to press the little heart button at the bottom, and I’ll know :)*
