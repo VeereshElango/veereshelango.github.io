@@ -5,8 +5,8 @@
     <description>Data Scientist &amp; Developer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Jul 2017 10:50:54 +0200</pubDate>
-    <lastBuildDate>Fri, 07 Jul 2017 10:50:54 +0200</lastBuildDate>
+    <pubDate>Wed, 12 Jul 2017 16:06:23 +0200</pubDate>
+    <lastBuildDate>Wed, 12 Jul 2017 16:06:23 +0200</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -145,6 +145,12 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;h2 id=&quot;take-away&quot;&gt;Take away&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;LSTM capable of holding information for long term, hence we can say it has memory&lt;/li&gt;
+  &lt;li&gt;LSTM networks are capable of modelling temporal aspects of data and hence have been used widely for text, videos, and time-series&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;h4 id=&quot;rnnlstm&quot;&gt;RNN/LSTM&lt;/h4&gt;
 &lt;ul&gt;
@@ -160,6 +166,8 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
   &lt;li&gt;&lt;a href=&quot;https://www.britannica.com/topic/Tirukkural&quot;&gt;Thirukkural - by Britannica&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=2&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;sqi=2&amp;amp;ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&amp;amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&amp;amp;usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg&quot;&gt;Thirukkural - by Wikipedia&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;em&gt;If you liked this article, and would like to see more like this, all you have to do is to press the little heart button at the bottom, and I’ll know :)&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Jul 2017 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/articles/2017-07/text-generation-with-thirukkural</link>
