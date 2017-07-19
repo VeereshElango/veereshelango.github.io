@@ -19,7 +19,7 @@ The goal of this attempt is to create a neural network model which learns the st
 poem and writes the poem following the same style for a given starting word. 
 This is achieved using popular LSTM (Long Short Term Memory) neural network model.
 
-Nowadays, Machine Learning creates a huge buzz and drums up the enthusiasm inside everyone to know about it. But for the amateurs, knowledge
+Nowadays, Machine Learning creates a huge buzz and drums up the enthusiasm within everyone to know about it. But for the amateurs, knowledge
 of neural network algorithms are a hurdle to admire the power of Machine Learning.
 
 Keeping that in mind, I thought to give a brief layman introduction followed by a technical introduction
@@ -28,7 +28,7 @@ Keeping that in mind, I thought to give a brief layman introduction followed by 
 ## Layman intro about RNN and LSTM
 
 The brain functionalities are the inspiration for most of the neural network algorithms.
-To understand this model, we have to remember how we learned alphabets and numbers.
+To understand this model, we have to recollect how we learned alphabets and numbers.
 
 For example, we will start to learn pronunciation of first four alphabets (A,B,C,D) individually, then 
   we will again try to say from A to D. Then we will learn next four alphabets (E, F, G, H), then we will again try to 
@@ -45,9 +45,9 @@ input from itself at each step. This enables it to hold information across input
 The problem of Recurrent Neural Network is that its memory is very short term.
 This is solved in Long Short Term Memory networks (LSTM).
 
-Long Short Term Memory (LSTM) networks are kind of recurrent neural network which are capable of learning long-term dependencies. 
+Long Short Term Memory (LSTM) network is kind of recurrent neural network which are capable of learning long-term dependencies. 
 LSTM has a cell state which runs through all the modules of the neural network.
-The cell state is very easy for the information to flow along it unchanged.
+The cell state is convenient for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.
 
 As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
@@ -98,7 +98,7 @@ The code is available [here](https://github.com/VeereshElango/text_generation_th
 
 The results definitely show Thiruvalluvar cannot be replaced by Machine anytime soon. But if you notice the results, astonishingly the 
 machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I was also amazed that how this 
-  simple model learn the syntax of Thirukkural such as nearly four words in the first line and three words in the 
+  simple model learnt the syntax of Thirukkural such as nearly four words in the first line and three words in the 
   second line. 
 
 Start Word : "சாதலின் "
