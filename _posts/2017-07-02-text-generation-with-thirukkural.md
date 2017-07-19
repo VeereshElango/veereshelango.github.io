@@ -16,11 +16,29 @@ Inspired by Andrej Karpathy's blog post [The Unreasonable Effectiveness of Recur
 Finally, I chose the poem [Thirukkural]((https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)) from one of the oldest surviving languages called [Tamil](https://en.wikipedia.org/wiki/Tamil_language).
 
 The goal of this attempt is to create a neural network model which learns the style of Thirukkural
-poem and writes poem following the same style for a given starting word. 
+poem and writes the poem following the same style for a given starting word. 
+This is achieved using popular LSTM (Long Short Term Memory) neural network model.
 
-Before we dive in I thought to give a simple intro to RNN and LSTM. 
+Nowadays, Machine Learning creates a huge buzz and drums up the enthusiasm inside everyone to know about it. But for the amateurs, knowledge
+of neural network algorithms are a hurdle to admire the power of Machine Learning.
 
-## Short intro about RNN and LSTM 
+Keeping that in mind, I thought to give a brief layman introduction followed by a technical introduction
+ to RNN and LSTM neural network models.
+  
+## Layman intro about RNN and LSTM
+
+The brain functionalities are the inspiration for most of the neural network algorithms.
+To understand this model, we have to remember how we learned alphabets and numbers.
+
+For example, we will start to learn pronunciation of first four alphabets (A,B,C,D) individually, then 
+  we will again try to say from A to D. Then we will learn next four alphabets (E, F, G, H), then we will again try to 
+  say from A to H. If you notice, we were looping from the first alphabet everytime whenever we learn new 
+  alphabets. Through this, we not only learn alphabets but also their sequence.
+  
+This is the logic behind Recurrent neural networks. It uses what it has learned from the previous 
+  inputs while learning the new input. It has a problem with very long input which was blown-away by LSTM.
+
+## Technical intro about RNN and LSTM 
 Recurrent Neural Network is a neural network model in which each hidden layer receives both input from the previous layer and 
 input from itself at each step. This enables it to hold information across inputs which can be thought as a memory.
 
@@ -33,7 +51,7 @@ The cell state is very easy for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.
 
 As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
- The other interesting applictions of this RNN/LSTM model are music generation, image captioning, language translator and even writing The Bible.
+ The other interesting applications of this RNN/LSTM model are music generation, image captioning, language translator and even writing The Bible.
 
 For further understanding about this neural networks, check the [references](#references).
 
@@ -68,7 +86,7 @@ This provoked the curiosity within me to know how it would be if Thiruvalluvar h
 The first step is to create the dataset. I found a Thirukkural literature in json format. I parsed the json file
  and created a text file with 1330 couplets alone.
  
-The next step is to fed this file as input to LSTM model. I took the sample
+The next step is to feed this file as input to LSTM model. I took the sample
 [code](https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py) from Keras Github repository and made changes to adapt to this dataset.
 It is a simple model with single LSTM layer with 128 neurons. It is fed with very small
 data of 1330 couplets with each of 7 words, in total 9310 words. 
@@ -78,7 +96,7 @@ The code is available [here](https://github.com/VeereshElango/text_generation_th
 
 ## Results
 
-The results definitely show Thiruvalluvar cannot be replaced by Machine anytime soon. But if you notice the results, astonishedly the 
+The results definitely show Thiruvalluvar cannot be replaced by Machine anytime soon. But if you notice the results, astonishingly the 
 machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I was also amazed that how this 
   simple model learn the syntax of Thirukkural such as nearly four words in the first line and three words in the 
   second line. 
@@ -148,7 +166,7 @@ Start Word : " பெருமை "
 ```
 
 ## Take away
-* LSTM capable of holding information for long term, hence we can say it has memory 
+* LSTM is capable of holding information for long term, hence we can say it has memory 
 * LSTM networks are capable of modelling temporal aspects of data and hence have been used widely for text, videos, and time-series
 
 ## References 
