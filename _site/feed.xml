@@ -5,8 +5,8 @@
     <description>Data Scientist &amp; Developer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Jul 2017 12:07:13 +0200</pubDate>
-    <lastBuildDate>Wed, 19 Jul 2017 12:07:13 +0200</lastBuildDate>
+    <pubDate>Wed, 19 Jul 2017 21:46:32 +0200</pubDate>
+    <lastBuildDate>Wed, 19 Jul 2017 21:46:32 +0200</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -18,7 +18,7 @@ Finally, I chose the poem &lt;a href=&quot;(https://en.wikipedia.org/wiki/Tirukk
 poem and writes the poem following the same style for a given starting word. 
 This is achieved using popular LSTM (Long Short Term Memory) neural network model.&lt;/p&gt;
 
-&lt;p&gt;Nowadays, Machine Learning creates a huge buzz and drums up the enthusiasm inside everyone to know about it. But for the amateurs, knowledge
+&lt;p&gt;Nowadays, Machine Learning creates a huge buzz and drums up the enthusiasm within everyone to know about it. But for the amateurs, knowledge
 of neural network algorithms are a hurdle to admire the power of Machine Learning.&lt;/p&gt;
 
 &lt;p&gt;Keeping that in mind, I thought to give a brief layman introduction followed by a technical introduction
@@ -27,7 +27,7 @@ of neural network algorithms are a hurdle to admire the power of Machine Learnin
 &lt;h2 id=&quot;layman-intro-about-rnn-and-lstm&quot;&gt;Layman intro about RNN and LSTM&lt;/h2&gt;
 
 &lt;p&gt;The brain functionalities are the inspiration for most of the neural network algorithms.
-To understand this model, we have to remember how we learned alphabets and numbers.&lt;/p&gt;
+To understand this model, we have to recollect how we learned alphabets and numbers.&lt;/p&gt;
 
 &lt;p&gt;For example, we will start to learn pronunciation of first four alphabets (A,B,C,D) individually, then 
   we will again try to say from A to D. Then we will learn next four alphabets (E, F, G, H), then we will again try to 
@@ -44,9 +44,9 @@ input from itself at each step. This enables it to hold information across input
 &lt;p&gt;The problem of Recurrent Neural Network is that its memory is very short term.
 This is solved in Long Short Term Memory networks (LSTM).&lt;/p&gt;
 
-&lt;p&gt;Long Short Term Memory (LSTM) networks are kind of recurrent neural network which are capable of learning long-term dependencies. 
+&lt;p&gt;Long Short Term Memory (LSTM) network is kind of recurrent neural network which are capable of learning long-term dependencies. 
 LSTM has a cell state which runs through all the modules of the neural network.
-The cell state is very easy for the information to flow along it unchanged.
+The cell state is convenient for the information to flow along it unchanged.
 There are four gates which regulate the addition and removal of information from the cell state.&lt;/p&gt;
 
 &lt;p&gt;As LSTM holds the information for long term, it can be trained with text file at character level as input, so that it learns to predict the next character in the sequence.
@@ -96,7 +96,7 @@ The model is trained for 20 iterations.&lt;/p&gt;
 
 &lt;p&gt;The results definitely show Thiruvalluvar cannot be replaced by Machine anytime soon. But if you notice the results, astonishingly the 
 machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I was also amazed that how this 
-  simple model learn the syntax of Thirukkural such as nearly four words in the first line and three words in the 
+  simple model learnt the syntax of Thirukkural such as nearly four words in the first line and three words in the 
   second line.&lt;/p&gt;
 
 &lt;p&gt;Start Word : “சாதலின் “&lt;/p&gt;

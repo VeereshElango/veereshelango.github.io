@@ -169,6 +169,7 @@ Start Word : " பெருமை "
 * LSTM is capable of holding information for long term, hence we can say it has memory 
 * LSTM networks are capable of modelling temporal aspects of data and hence have been used widely for text, videos, and time-series
 
+
 ## References 
 #### RNN/LSTM
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
