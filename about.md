@@ -6,7 +6,8 @@ permalink: /about/
 
 #### Bio
 ----
-I am pursuing my Master's in [Data Science](http://www.masterschool.eitdigital.eu/programmes/dsc/) at [University of Nice Sophia Antipolis](http://unice.fr/en) as an [EIT Digital](http://www.masterschool.eitdigital.eu/) student. Previously, I worked at [Infosys](https://www.infosys.com/) for around 4 years as a Senior Systems Engineer.
+I am pursuing my final year Master's in [Data Science](http://www.masterschool.eitdigital.eu/programmes/dsc/) at [KTH Royal Institue of Technology](www.kth.se) as an [EIT Digital](http://www.masterschool.eitdigital.eu/) student.
+I did my first year of same Master's at [University of Nice Sophia Antipolis](http://unice.fr/en). Previously, I worked at [Infosys](https://www.infosys.com/) for around 4 years as a Senior Systems Engineer.
 
 #### Projects
 ----
