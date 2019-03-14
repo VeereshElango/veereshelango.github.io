@@ -5,9 +5,9 @@
     <description>Data Scientist &amp; Developer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Jul 2017 21:46:32 +0200</pubDate>
-    <lastBuildDate>Wed, 19 Jul 2017 21:46:32 +0200</lastBuildDate>
-    <generator>Jekyll v3.5.0</generator>
+    <pubDate>Thu, 14 Mar 2019 05:22:04 +0100</pubDate>
+    <lastBuildDate>Thu, 14 Mar 2019 05:22:04 +0100</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Can a Machine write Thirukkural ?</title>
@@ -63,16 +63,14 @@ In total, there are 1330 couplets (two lines joined by rhyme) which are divided 
 Each couplet has exactly 7 words, 4 in one line and 3 in next.&lt;/p&gt;
 
 &lt;p&gt;Example couplet from Thirukkural (no : 78)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;அன்பகத் தில்லா உயிர்வாழ்க்கை வன்பாற்கண்
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;அன்பகத் தில்லா உயிர்வாழ்க்கை வன்பாற்கண்
 வற்றல் மரந்தளிர்த் தற்று
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Explanation in English would be&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Without love in the heart, 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Without love in the heart, 
  Life is like a sapless tree in a barren desert. 
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&quot;why-this-dataset&quot;&gt;Why this dataset?&lt;/h2&gt;
 &lt;p&gt;Since childhood, I admired how he expresses great morals in just 7 words.
  He wrote only 1330 couplets which almost delivers all the essential morals
@@ -100,68 +98,55 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
   second line.&lt;/p&gt;
 
 &lt;p&gt;Start Word : “சாதலின் “&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;சாதலின் இல்லாய் நினிபன் பெருந்தகை 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;சாதலின் இல்லாய் நினிபன் பெருந்தகை 
 சிலையார் யாணென்னும் பயர்.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;சாதலின்ற் பொருட்செல்வம் தாண்டற்றும் மருந்து 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;சாதலின்ற் பொருட்செல்வம் தாண்டற்றும் மருந்து 
 கேணல் சிறப்பின் இரந்து.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Start Word : “   காதல்”&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காதல்ல்லாது செய்யார் முன்றி தீயும் 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காதல்ல்லாது செய்யார் முன்றி தீயும் 
 அருவியல் போர் கேது.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காதல்டு யாதெனின் நெஞ்சத்தான் கண்ணுடையார் க
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காதல்டு யாதெனின் நெஞ்சத்தான் கண்ணுடையார் க
 ேதலிற் கொள்வாரோட்க்கு விருந்து.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Start Word : “  காமம் “&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காமம்ன்தும் இடும்பை பஇடைச் சிறப்பின் இரவுருமாடு 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காமம்ன்தும் இடும்பை பஇடைச் சிறப்பின் இரவுருமாடு 
 ஒரிவது குறவினும் பெறும்.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காமம்ணிடும் பெறுப்சின் செய்யும் அவர்தென்பீர் 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;காமம்ணிடும் பெறுப்சின் செய்யும் அவர்தென்பீர் 
 கண்ட செல்வம் தரும்.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Start Word : “ இறைவன் “&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;இறைவன் பத் தலையபின் துணையாகை 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;இறைவன் பத் தலையபின் துணையாகை 
 நீக்கிக் காமந்த நூர்.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;இறைவன் முன்றினும் உய்வாத்தல் இருவறுப் 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;இறைவன் முன்றினும் உய்வாத்தல் இருவறுப் 
 துணையாது விழைந்து விடல்.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Start Word : “  ஒழுக்க”&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ஒழுக்கத் தலையபின் துணையாது நீங்கி 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ஒழுக்கத் தலையபின் துணையாது நீங்கி 
 விருமுங்க்கல்ல செய்யார் மாத்து.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Start Word : “ உயர்ந்த”&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;உயர்ந்த தஒழில் தூழ்கச் சிறப்பின் 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;உயர்ந்த தஒழில் தூழ்கச் சிறப்பின் 
 இரந்தவற்று விகர்முடியார் அனைத்து.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;உயர்ந்த யஇருள் நோக்கெச் சுடைத்து வேநீால் 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;உயர்ந்த யஇருள் நோக்கெச் சுடைத்து வேநீால் 
 வடிவார் என்றார் அனைத்து.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Start Word : “ பெருமை “&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;பெருமை எய்தார் முற்றியது எண்ணிக் 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;பெருமை எய்தார் முற்றியது எண்ணிக் 
 கூடியமை என்னும் செருக்கு.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;பெருமை கூற்றம் காதல் அல்லசெய்தல் 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;பெருமை கூற்றம் காதல் அல்லசெய்தல் 
 இன்னை அருமாப் படும்.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;take-away&quot;&gt;Take away&lt;/h2&gt;
 &lt;ul&gt;

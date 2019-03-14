@@ -14,7 +14,7 @@ url: https://veereshelango.github.io
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Europe/Stockholm
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -34,8 +34,8 @@ kramdown:
 #
 owner:
   name: Veeresh Elango
-  avatar: 450_600.jpg
-  job: "Data Science Master's Student"
+  avatar: suit.jpg
+  job: "Data Scientist @ Scania"
   bio: "I am fascinated to explore different machine learning algorithms and admire them by applying it."
   email: ecveer@gmail.com
   disqus-shortname: veereshelango
