@@ -4,11 +4,17 @@ title:  About
 permalink: /about/
 ---
 
-#### Bio
+#### Work Experience
 ----
-I am pursuing my final year Master's in [Data Science](http://www.masterschool.eitdigital.eu/programmes/dsc/) at [KTH Royal Institue of Technology](www.kth.se) as an [EIT Digital](http://www.masterschool.eitdigital.eu/) student.
-I did my first year of same Master's at [University of Nice Sophia Antipolis](http://unice.fr/en). Previously, I worked at [Infosys](https://www.infosys.com/) for around 4 years as a Senior Systems Engineer.
+I am currently working as Data Scientist at R&D of [Scania CV AB](https://www.scania.com/) at Stockholm, Sweden. Being part of Geo-spatial intelligence group
+I mainly focus on extracting insights from positional data and support the company in making informed decisions. 
+Previously, I worked at [Infosys](https://www.infosys.com/) for around 4 years as a Senior Systems Engineer.
 
+#### Education
+---
+
+I pursued my final year Master's in [Data Science](http://www.masterschool.eitdigital.eu/programmes/dsc/) at [KTH Royal Institue of Technology](www.kth.se) as an [EIT Digital](http://www.masterschool.eitdigital.eu/) student.
+I did my first year of same Master's at [University of Nice Sophia Antipolis](http://unice.fr/en). 
 #### Projects
 ----
 *"Identifying influential words and their importance in Convolutional Neural network for sentence classification"* under the guidance of [Frédéric Precioso](http://www.i3s.unice.fr/~precioso/)
