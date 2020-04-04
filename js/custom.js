@@ -1,4 +1,4 @@
-Plotly.d3.csv('https://github.com/VeereshElango/tsne-visualization-20NewsGroup/blob/master/model/20_news_group_tsne_visualization.csv', function(err, rows){
+Plotly.d3.csv('model/20_news_group_tsne_visualization.csv', function(err, rows){
 		
 		var perplexities = ["10","30","50","100"],
 		ngrams={
