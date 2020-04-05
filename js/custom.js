@@ -57,7 +57,7 @@ Plotly.d3.json('model/20_news_group_tsne_visualization.json', function(err, json
 					      width: 0.5
 					    }
 	        		},
-	        		name: key	        		
+	        		name: key
 	      		};
 
 			data.push(trace)
