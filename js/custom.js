@@ -1,5 +1,4 @@
-Plotly.d3.csv('model/20_news_group_tsne_visualization.csv', function(err, rows){
-		
+Plotly.d3.json('model/20_news_group_tsne_visualization.json', function(err, jsonObj){
 		var perplexities = ["10","30","50","100"],
 		ngrams={
 			"Unigram":"1_1", "Unigram&Bigram":"1_2", "Unigram&Bigram&Trigram":"1_3",
@@ -7,33 +6,18 @@ Plotly.d3.csv('model/20_news_group_tsne_visualization.csv', function(err, rows){
 		},
 		chosenPerplexity = "",
 		chosenNgram="",
-		allTargetNames = unpack(rows,"target_names"),
-		targetNames = {},
+		targetNames = Object.keys(jsonObj),
 		defaultPerplexity = perplexities[0]
 		defaultNgrams = ngrams["Unigram"],
 		target_color =['#2E91E5', '#E15F99', '#1CA71C', '#FB0D0D', '#DA16FF', '#222A2A', '#B68100', '#750D86', '#EB663B', '#511CFB', '#00A08B', '#FB00D1', '#FC0080', '#B2828D', '#6C7C32', '#778AAE', '#862A16', '#A777F1', '#620042', '#1616A7'],
 		target_color_map = {};
-
-		for(var i=0; i < rows.length; i++){
-			var row = rows[i]
-			if(row["target_names"] in targetNames){
-				targetNames[row["target_names"]].push(row)
-			}
-			else{
-				targetNames[row["target_names"]] = [row]
-			}
-		}
-
+		
 		var c_i = 0;
 		for(key in targetNames){
 			target_color_map[key] = target_color[c_i]
 			c_i++
 		}
 		
-		function unpack(rows, key) {
-        	return rows.map(function(row) { return row[key]; });
-    	}
-
 		function assignOptions(textArray, selector) {
 		  for (var i = 0; i < textArray.length;  i++) {
 		      var currentOption = document.createElement('option');
@@ -50,14 +34,13 @@ Plotly.d3.csv('model/20_news_group_tsne_visualization.csv', function(err, rows){
 		}
     
 		function plotOnDemand(perplexity, ngram_mode){
-			console.log(perplexity, ngram_mode)
 			chosenPerplexity = perplexity
 			chosenNgram = ngram_mode
 			var data = [];
-			for (var key in targetNames){
-				var comp1 = unpack(targetNames[key], perplexity+'_'+ngram_mode+'_comp1'),
-	    		comp2 = unpack(targetNames[key],  perplexity+'_'+ngram_mode+"_comp2"),
-	    		text = unpack(targetNames[key],"targetNames")
+			for (var key in jsonObj){
+				var comp1 = jsonObj[key][perplexity+'_'+ngram_mode+'_comp1'],
+	    		comp2 = jsonObj[key][perplexity+'_'+ngram_mode+'_comp2'],
+	    		text = jsonObj[key]["targetNames"]
 
 				var trace = {
 			        x: comp1,
@@ -95,8 +78,7 @@ Plotly.d3.csv('model/20_news_group_tsne_visualization.csv', function(err, rows){
 			hoverInfo = document.getElementById('hoverinfo');
 			myPlot.on('plotly_hover', function(data){
 		    	var infotext = data.points.map(function(d){
-		    		targetGroup = targetNames[d.data.name]
-		    		console.log(d.x, d.y, d.data.name, chosenPerplexity)
+		    		targetGroup = jsonObj[d.data.name]
 		    		data = getTextData(targetGroup, d)
 		      		return (data);
 		    	});
@@ -119,10 +101,11 @@ Plotly.d3.csv('model/20_news_group_tsne_visualization.csv', function(err, rows){
 		countrySelector.addEventListener('change', updatePerplexity, false);
 		
 		function getTextData(targetGroup, d){
-			for(var i=0; i< targetGroup.length;i++){
-	    			row = targetGroup[i]
-	    			if((row[chosenPerplexity+"_"+chosenNgram+"_comp1"] === d.x.toString() && row[chosenPerplexity+"_"+chosenNgram+"_comp2"] === d.y.toString()) ){
-	    				return "<kbd>"+d.data.name+"</kbd><br>"+row["data"]
+			var comp1 = targetGroup[chosenPerplexity+"_"+chosenNgram+"_comp1"] 
+			var comp2 = targetGroup[chosenPerplexity+"_"+chosenNgram+"_comp2"] 
+			for(var i=0; i< comp1.length;i++){
+	    			if((comp1[i] === d.x && comp2[i] === d.y) ){
+	    				return "<kbd>"+d.data.name+"</kbd><br>"+targetGroup["data"][i]
 	    				.replace("From","<br><mark>From</mark>")
 	    				.replace("Subject","<br><mark>Subject</mark>")
 	    				.replace("Lines","<br><mark>Lines</mark>")
