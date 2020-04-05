@@ -1,3 +1,9 @@
+var perplexities = ["10","30","50","100"],
+ngrams={
+    "Unigram":"1_1", "Unigram&Bigram":"1_2", "Unigram&Bigram&Trigram":"1_3",
+    "Bigram":"2_2","Trigram":"3_3"
+};
+
 Plotly.d3.json('model/20_news_group_tsne_visualization.json', function(err, jsonObj){
 		var perplexities = ["10","30","50","100"],
 		ngrams={
@@ -116,3 +122,59 @@ Plotly.d3.json('model/20_news_group_tsne_visualization.json', function(err, json
 		}
 		
 	})
+
+function appendPCAColumn(row, ngram, ngramValue){
+    var col = document.createElement("td")
+    var imageName = pca_plots.replace("NGRAM",ngramValue)
+    col.innerHTML = "<img src='img/tsne_visualizations/"+imageName+"' class='img-rounded' alt='"+ngram+"' width='200' height='200'> "
+    row.appendChild(col)
+}
+
+function appendTSNEColumns(row, ngram, ngramValue){
+    for(var j=0; j<perplexities.length;j++){
+        var col = document.createElement("td")
+        var imageName = tsne_plots.replace("NGRAM",ngramValue).replace("PERPLEXITY",perplexities[j])
+        console.log(imageName)
+        col.innerHTML = "<img src='img/tsne_visualizations/"+imageName+"' class='img-rounded' alt='"+ngram+"_"+perplexities[j]+"' width='200' height='200'> "
+        row.appendChild(col)
+    }
+}
+
+function appendSideHeader(row, ngram){
+    var col = document.createElement("td")
+    col.innerHTML = "<span>"+ngram.replace(/&/g,"&<br>")+"</span>"
+    col.style.fontSize = "small";
+    row.appendChild(col)
+}
+function appendTopRow(row){
+    var col = document.createElement("td")
+    col.innerHTML = "<div></div>"
+    row.appendChild(col)
+    var col = document.createElement("td")
+    col.innerHTML = "<div class='text-center'>PCA</div>"
+    row.appendChild(col)
+    for(var j=0; j<perplexities.length;j++){
+        var col = document.createElement("td")
+        col.innerHTML = "<div class='text-center'>t-SNE Perplexity-"+perplexities[j]+"</div>"
+        row.appendChild(col)
+    }
+}
+var plotTable = document.getElementById("tableGallery")
+
+ngramsList = ["Unigram","Unigram&Bigram","Unigram&Bigram&Trigram",
+                  "Bigram","Trigram"]
+var tsne_plots = "t-SNE- 20News group - TfIdf - NGRAM- tSNE perplexity - PERPLEXITY.png"
+var pca_plots = "PCA- 20News group - TfIdf - NGRAM.png"
+
+var row = document.createElement("tr")
+appendTopRow(row)
+plotTable.appendChild(row)
+
+for(var i=0; i<ngramsList.length ; i++){
+    var ngram = ngramsList[i]
+    var row = document.createElement("tr")
+    appendSideHeader(row, ngram)
+    appendPCAColumn(row, ngram, ngrams[ngram])
+    appendTSNEColumns(row, ngram, ngrams[ngram])
+    plotTable.appendChild(row)
+}
