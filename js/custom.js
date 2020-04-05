@@ -134,7 +134,6 @@ function appendTSNEColumns(row, ngram, ngramValue){
     for(var j=0; j<perplexities.length;j++){
         var col = document.createElement("td")
         var imageName = tsne_plots.replace("NGRAM",ngramValue).replace("PERPLEXITY",perplexities[j])
-        console.log(imageName)
         col.innerHTML = "<img src='img/tsne_visualizations/"+imageName+"' class='img-rounded' alt='"+ngram+"_"+perplexities[j]+"' width='200' height='200'> "
         row.appendChild(col)
     }
