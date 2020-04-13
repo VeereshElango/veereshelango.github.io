@@ -1,14 +1,19 @@
 ---
-layout: post
-title: Can a Machine write Thirukkural ?
+title: Can a machine write Thirukkural?
 excerpt: "A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word."
-categories: [LSTM]
 comments: true
-tags: keras tamil lstm rnn 
-image:
-  feature: https://unsplash.it/1250/475?image=1073
-  credit: patrick tomasso
-  creditlink: https://unsplash.com/@impatrickt
+categories:
+    -  Pet-project
+tags: 
+    - nlp
+    - keras 
+    - tamil 
+    - lstm 
+    - text_generation 
+tagline: "A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word."
+header:
+  overlay_image: /assets/images/background-teaser.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 

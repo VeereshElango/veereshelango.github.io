@@ -1,17 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>VeereshElango</title>
-    <description>Data Scientist &amp; Developer</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Mar 2019 05:22:04 +0100</pubDate>
-    <lastBuildDate>Thu, 14 Mar 2019 05:22:04 +0100</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
-    
-      <item>
-        <title>Can a Machine write Thirukkural ?</title>
-        <description>&lt;p&gt;Inspired by Andrej Karpathy’s blog post &lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;, I was super excited to apply the LSTM and see the results on a different dataset.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" /><updated>2020-04-13T10:26:23+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Veeresh Elango</title><subtitle>Data Scientist</subtitle><author><name>Veeresh Elango</name><email>ecveer@gmail.com</email></author><entry><title type="html">Can a machine write Thirukkural?</title><link href="http://localhost:8080/pet-project/text-generation-with-thirukkural/" rel="alternate" type="text/html" title="Can a machine write Thirukkural?" /><published>2017-07-02T00:00:00+02:00</published><updated>2017-07-02T00:00:00+02:00</updated><id>http://localhost:8080/pet-project/text-generation-with-thirukkural</id><content type="html" xml:base="http://localhost:8080/pet-project/text-generation-with-thirukkural/">&lt;p&gt;Inspired by Andrej Karpathy’s blog post &lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;, I was super excited to apply the LSTM and see the results on a different dataset.
 Finally, I chose the poem &lt;a href=&quot;(https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7)&quot;&gt;Thirukkural&lt;/a&gt; from one of the oldest surviving languages called &lt;a href=&quot;https://en.wikipedia.org/wiki/Tamil_language&quot;&gt;Tamil&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The goal of this attempt is to create a neural network model which learns the style of Thirukkural
@@ -170,24 +157,4 @@ machine (LSTM) has learnt to produce sensible Tamil words with punctuations. I w
   &lt;li&gt;&lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=2&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;sqi=2&amp;amp;ved=0ahUKEwic78TMjfLUAhXLfRoKHUSHDmgQFggxMAE&amp;amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTirukku%25E1%25B9%259Ba%25E1%25B8%25B7&amp;amp;usg=AFQjCNHgAu5JoMvimy5DIy6LL3p1Wl10Lg&quot;&gt;Thirukkural - by Wikipedia&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;em&gt;If you liked this article, and would like to see more like this, all you have to do is to press the little heart button at the bottom, and I’ll know :)&lt;/em&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 02 Jul 2017 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/articles/2017-07/text-generation-with-thirukkural</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-07/text-generation-with-thirukkural</guid>
-        
-        <category>keras</category>
-        
-        <category>tamil</category>
-        
-        <category>lstm</category>
-        
-        <category>rnn</category>
-        
-        
-        <category>LSTM</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;em&gt;If you liked this article, and would like to see more like this, all you have to do is to press the little heart button at the bottom, and I’ll know :)&lt;/em&gt;&lt;/p&gt;</content><author><name>Veeresh Elango</name><email>ecveer@gmail.com</email></author><category term="nlp" /><category term="keras" /><category term="tamil" /><category term="lstm" /><category term="text_generation" /><summary type="html">A Character level LSTM Model has been trained to learn Thirukkural literature and write poem with a given starting word.</summary></entry></feed>
