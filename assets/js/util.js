@@ -1,4 +1,4 @@
-function generate_text(element, model, start_string, char2idx, idx2char, temperature=1.0, num_characters = 100){
+function generate_text(model, start_string, char2idx, idx2char, temperature=1.0, num_characters = 100){
   // Evaluation step (generating text using the learned model)
 
   // Number of characters to generate
@@ -35,11 +35,31 @@ function generate_text(element, model, start_string, char2idx, idx2char, tempera
         i--
         }
       else{
+         /*var evt = document.createEvent("Event");
+        evt.initEvent("myEvent",true,true);
+        // custom param
+        evt.foo = generatedCharacter;
+        //register
+        document.addEventListener("myEvent",myEventHandler,false);
+        //invoke
+        document.dispatchEvent(evt);*/
         text_generated.push(generatedCharacter)
       }
     }
   return (start_string + text_generated.join(""))
 }
+
+function appendText(c){
+  console.log("Appendedv: "+c)
+  var element = document.getElementById('output')
+  element.textContent += c;
+}
+function myEventHandler(e){
+//  appendText(e.foo);
+  var element = document.getElementById('output')
+  element.textContent += e.foo;
+}
+
 
 function sample(probs, temperature)  {
     logits = tf.div(predictions, Math.max(temperature, 1e-6));
