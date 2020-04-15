@@ -13,13 +13,17 @@ include_style: tamil_song_style.html
 excerpt: This applications generates song lyrics in tamil using machine learning model trained on 4142 tamil songs.
 ---
 <p>This applications generates song lyrics in tamil using machine learning model trained on 4142 tamil songs.</p>
+
+**Work on progress!** This site is under update to make it more user friendly.
+{: .notice--danger}
+
 <div class="row" >
   <div class="column side" style="background-color:#f5f0f5">
     Enter starting word in Tamil <input type="text" value="அன்னை " id="startText">
     Choose the diversity <input type="range" id="diversity" class="form-control-range" min="0.1" max="1" step="0.1" value="0.2">
     <label for="quantity">Number of characters</label>
     <input type="number" id="quantity" name="quantity" min="50" max="5000" value="100">
-    <input type="button" onclick="generateLyrics()" class="btn btn--primary" value="Generate Text">
+    <input type="button" onclick="generateLyrics()" class="btn btn--info" value="Generate Text">
   </div>
   <div class="column middle" >
     <p id="output"></p>

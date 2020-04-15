@@ -31,3 +31,6 @@ _site
 #Intellij
 .idea
 /_site/
+/_site/
+/_site/about/
+/_site/categories/
