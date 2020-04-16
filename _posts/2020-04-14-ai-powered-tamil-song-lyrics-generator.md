@@ -44,32 +44,34 @@ Please bear with the algorithm and enjoy by trying with different starting words
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="/assets/js/util.js"></script>
 <script>
-// Load the Google Transliterate API
-    google.load("elements", "1", {
-        packages: "transliteration"
-    });
-    function onLoad() {
-        var options = {
-            sourceLanguage:
-            google.elements.transliteration.LanguageCode.ENGLISH,
-            destinationLanguage:
-            [google.elements.transliteration.LanguageCode.TAMIL],
-            transliterationEnabled: true
-        };
-        // Create an instance on TransliterationControl with the required
-        // options.
-        if (google.elements.transliteration.isBrowserCompatible()) {
+    try{
+        // Load the Google Transliterate API
+        google.load("elements", "1", {
+            packages: "transliteration"
+        });
+        function onLoad() {
+            var options = {
+                sourceLanguage:
+                google.elements.transliteration.LanguageCode.ENGLISH,
+                destinationLanguage:
+                [google.elements.transliteration.LanguageCode.TAMIL],
+                transliterationEnabled: true
+            };
+            // Create an instance on TransliterationControl with the required
+            // options.
             var control =
-            new google.elements.transliteration.TransliterationControl(options);
-            // Enable transliteration in the textbox with id
-            // 'transliterateTextarea'.
-            control.makeTransliteratable(['startText']);}
-         else{
-            var element = document.getElementById("transliterationInfo");
-            element.parentNode.removeChild(element);
-         }
+                new google.elements.transliteration.TransliterationControl(options);
+                // Enable transliteration in the textbox with id
+                // 'transliterateTextarea'.
+                control.makeTransliteratable(['startText']);
+        }
+        google.setOnLoadCallback(onLoad);        
     }
-    google.setOnLoadCallback(onLoad);
+    catch(err){
+        console.log(err)
+        var element = document.getElementById("transliterationInfo");
+                    element.parentNode.removeChild(element);
+    }
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function(){
