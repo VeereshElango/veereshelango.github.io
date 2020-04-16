@@ -41,8 +41,7 @@ Please bear with the algorithm and enjoy by trying with different starting words
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"></script>
 <script src="/assets/models/fullsongs_model_working/char_idx_converter.js"></script>
-<link type="text/css" href="/assets/css/transliteration.css" rel="stylesheet"/>
-<script type="text/javascript" src="/assets/js/jsapi.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="/assets/js/util.js"></script>
 <script>
 // Load the Google Transliterate API
