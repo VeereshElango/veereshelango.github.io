@@ -1,5 +1,5 @@
 ---
-title: "Artificial Intelligence (AI)-powered Tamil song lyrics generator"
+title: "Artificial Intelligence (AI)-powered automatic Tamil lyrics generator"
 categories:
   - apps
 tags:
