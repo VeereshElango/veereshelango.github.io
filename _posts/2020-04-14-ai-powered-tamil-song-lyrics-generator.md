@@ -22,8 +22,8 @@ Please bear with the algorithm and enjoy by trying with different starting words
 <div class="row" >
   <div class="column side" style="background-color:#f5f0f5">
     <div>
-        Enter starting word in Tamil <br> <!-- <small>(Type in english and give a space)</small>-->
-        <input type="text" id="startText" value="காதல் " required><small id="valError" class="errorMsg"></small>
+        Enter starting word in Tamil <br><small>(Type in english and give a space)</small>
+        <input type="text" id="startText" required><small id="valError" class="errorMsg"></small>
     </div>
     <div>
         Choose the diversity <span id="diversityValue"></span> <br>
@@ -41,7 +41,7 @@ Please bear with the algorithm and enjoy by trying with different starting words
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"></script>
 <script src="/assets/models/fullsongs_model_working/char_idx_converter.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/assets/js/jsapi.js"></script>
 <script src="/assets/js/util.js"></script>
 <script>
 // Load the Google Transliterate API
