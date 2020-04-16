@@ -22,8 +22,8 @@ Please bear with the algorithm and enjoy by trying with different starting words
 <div class="row" >
   <div class="column side" style="background-color:#f5f0f5">
     <div>
-        Enter starting word in Tamil <br><small>(Type in english and give a space)</small>
-        <input type="text" id="startText" required><small id="valError" class="errorMsg"></small>
+        Enter starting word in Tamil <br> <!--<small>(Type in english and give a space)</small>-->
+        <input type="text" id="startText" value="காதல் " required><small id="valError" class="errorMsg"></small>
     </div>
     <div>
         Choose the diversity <span id="diversityValue"></span> <br>
