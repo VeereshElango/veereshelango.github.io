@@ -19,15 +19,31 @@ header:
 Please bear with the algorithm and enjoy by trying with different starting words and diversity ranges.
 {: .notice--danger}
 
+<div class="row">
+    <div class="column side">
+        <label for="cars">Choose the model:</label>
+    </div>
+    <div class="column side">
+        <select required id="modelChoice">
+            <option hidden disabled selected value> -- select an option -- </option>
+            <option value="allSongs" >All songs</option>
+        </select>
+    </div>
+    <div class="column side">
+        <button class="btn btn--info" id="loadModelButt">Load model</button>
+    </div>
+    <div class="column side"><p id="modelLoadingOutput"></p></div>
+</div>
 <div class="row" >
   <div class="column side" style="background-color:#f5f0f5">
     <div>
-        Enter starting word in Tamil <br> <!--<small id="transliterationInfo">(Type in english and give a space)</small>-->
+        Enter starting word in Tamil <br> <small class="subMessages">(Transliterate option available in desktop)</small> 
+        <!--<small id="transliterationInfo">(Type in english and give a space)</small>-->
         <input type="text" id="startText" value="காதல் " required><small id="valError" class="errorMsg"></small>
     </div>
     <div>
         Choose the diversity <span id="diversityValue"></span> <br>
-        <small>(Low value - predictable text & <br> High value - suprising text)</small>
+        <small class="subMessages">(Low value - predictable text & <br> High value - suprising text)</small>
         <input type="range" id="diversitySlider" class="form-control-range" min="0.1" max="1" step="0.1" value="0.2">
     </div>
     <label for="quantity">Number of characters</label>
@@ -77,9 +93,8 @@ Please bear with the algorithm and enjoy by trying with different starting words
     document.addEventListener("DOMContentLoaded", function(){
         document.getElementById('genTextBut')
                 			.addEventListener('click', generateLyrics);
-        tf.loadLayersModel('/assets/models/fullsongs_model_working/model.json').then(function(model) {
-          window.model = model;
-        });
+        document.getElementById('loadModelButt')
+                			.addEventListener('click', loadModel);        
     });
     var slider = document.getElementById("diversitySlider");
     var output = document.getElementById("diversityValue");
@@ -87,39 +102,18 @@ Please bear with the algorithm and enjoy by trying with different starting words
     slider.oninput = function() {
       output.innerHTML = this.value;
     }
-    function setStatusMessage(msg) {
-        document.getElementById('output').innerHTML = "<small>"+msg+"</small>";
+    function setStatusMessage(msg, id) {
+        document.getElementById(id).innerHTML = "<small>"+msg+"</small>";
     }
     function sleep(milliseconds) {
         var start = Date.now();
         while ((Date.now() - start) < milliseconds);
     }
-    function generateLyrics(event){
-        event.preventDefault();
-        document.getElementById('genTextBut').disabled=true;
-        setStatusMessage('Please wait while loading...');
-        setTimeout(function () {
-            var textbox = document.getElementById("startText")
-            console.log(textbox.value)
-            if(textbox.value === ""){
-                document.getElementById("valError").innerText = "Field is empty.";
-                setStatusMessage('Enter a starting word or phrase.');
-            }
-            else if(window.model){
-              document.getElementById("valError").innerText = "";
-              var diversity = document.getElementById("diversitySlider")
-              var quantity = document.getElementById("quantity")
-              generatedString = generate_text(window.model, textbox.value, char2idx, idx2char, diversity.value, quantity.value)
-              setStatusMessage(generatedString);
-            }
-            else{
-              setStatusMessage('Model not loaded');
-            }
-            document.getElementById('genTextBut').disabled=false;
-        }, 100);
-    }
+    
 </script>
 
+<br>
+A detailed discussion about this application can be found [here](https://cutt.ly/tamil-lyrics-blog) and if you are looking for code then it's [here](https://cutt.ly/1t7RMno). 
 
 <br>
 I like to thank [Nikhil Sulibhavi](https://www.linkedin.com/in/nikhil-sulibhavi/) for his help with Javascript.

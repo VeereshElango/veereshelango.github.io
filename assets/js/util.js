@@ -1,6 +1,52 @@
+function loadModel(){
+    event.preventDefault();
+    document.getElementById('loadModelButt').disabled=true;
+    setStatusMessage('Please wait while loading...',"modelLoadingOutput");
+    setTimeout(function () {
+        var modelChoice = document.getElementById("modelChoice")
+        if(modelChoice.value === ""){
+        }
+        else{
+          tf.loadLayersModel('/assets/models/fullsongs_model_working/model.json').then(function(model) {
+                    window.model = model;
+                  });
+          var timer = setInterval(
+            function(){
+              if (window.model) clearInterval(timer)
+            },
+            100
+          )
+          setStatusMessage("Model Loaded","modelLoadingOutput");
+          console.log(window.model)
+        }
+        document.getElementById('loadModelButt').disabled=false;
+    }, 100);
+}
+function generateLyrics(event){
+        event.preventDefault();
+        document.getElementById('genTextBut').disabled=true;
+        setStatusMessage('Please wait while loading...','output');
+        setTimeout(function () {
+            var textbox = document.getElementById("startText")
+            console.log(textbox.value)
+            if(textbox.value === ""){
+                document.getElementById("valError").innerText = "Field is empty.";
+                setStatusMessage('Enter a starting word or phrase.','output');
+            }
+            else if(window.model){
+              document.getElementById("valError").innerText = "";
+              var diversity = document.getElementById("diversitySlider")
+              var quantity = document.getElementById("quantity")
+              generatedString = generate_text(window.model, textbox.value, char2idx, idx2char, diversity.value, quantity.value)
+              setStatusMessage(generatedString,'output');
+            }
+            else{
+              setStatusMessage('Model not loaded. Please choose the model from drop down and click load model.','output');
+            }
+            document.getElementById('genTextBut').disabled=false;
+        }, 100);
+    }
 function generate_text(model, start_string, char2idx, idx2char, temperature=1.0, num_characters = 100){
-  // Evaluation step (generating text using the learned model)
-
   // Number of characters to generate
   num_generate = num_characters
 
@@ -35,32 +81,11 @@ function generate_text(model, start_string, char2idx, idx2char, temperature=1.0,
         i--
         }
       else{
-         /*var evt = document.createEvent("Event");
-        evt.initEvent("myEvent",true,true);
-        // custom param
-        evt.foo = generatedCharacter;
-        //register
-        document.addEventListener("myEvent",myEventHandler,false);
-        //invoke
-        document.dispatchEvent(evt);*/
         text_generated.push(generatedCharacter)
       }
     }
   return (start_string + text_generated.join(""))
 }
-
-function appendText(c){
-  console.log("Appendedv: "+c)
-  var element = document.getElementById('output')
-  element.textContent += c;
-}
-function myEventHandler(e){
-//  appendText(e.foo);
-  var element = document.getElementById('output')
-  element.textContent += e.foo;
-}
-
-
 function sample(probs, temperature)  {
     logits = tf.div(predictions, Math.max(temperature, 1e-6));
     //console.log(logits)
