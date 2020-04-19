@@ -8,24 +8,20 @@ function loadModel(){
         }
         else{
           tf.loadLayersModel('/assets/models/fullsongs_model_working/model.json').then(function(model) {
-                    window.model = model;
-                  });
-          var timer = setInterval(
-            function(){
-              if (window.model) clearInterval(timer)
-            },
-            100
-          )
-          setStatusMessage("Model Loaded","modelLoadingOutput");
-          console.log(window.model)
+             window.model = model;
+             setStatusMessage("Model Loaded","modelLoadingOutput");
+             document.getElementById('loadModelButt').disabled=false;
+          });
         }
-        document.getElementById('loadModelButt').disabled=false;
+        console.log("inside timeout")
     }, 100);
+
+    console.log(window.model)
 }
 function generateLyrics(event){
         event.preventDefault();
         document.getElementById('genTextBut').disabled=true;
-        setStatusMessage('Please wait while loading...','output');
+        setStatusMessage('Please wait while generating...','output');
         setTimeout(function () {
             var textbox = document.getElementById("startText")
             console.log(textbox.value)
