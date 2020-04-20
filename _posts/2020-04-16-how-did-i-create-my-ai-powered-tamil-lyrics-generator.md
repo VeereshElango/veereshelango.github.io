@@ -45,7 +45,7 @@ For others, I will take you through my journey in transforming the idea to a wor
 ## Data Collection
 The first and foremost thing is data, and it is not available ready-made in this case. I have to prepare the dataset by myself.
 I couldn't find many websites where Tamil song lyrics are written in Tamil - Weird. At last, 
-[tamilpaa.com](tamilpaa.com) suited my needs. I utilized the python library
+[tamilpaa.com](https://www.tamilpaa.com/) suited my needs. I utilized the python library
 called [beautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#) to scrap the songs from tamilpaa.com.
 {: .text-justify}
 
@@ -128,14 +128,14 @@ following the above example model tries to learn
 ![no-alignment]({{ site.url }}{{ site.baseurl }}/assets/images/lstm_tamil_lyric.jpg)
 
 During test time, a character will be fed to the RNN, and it returns the distribution
-of characters are likely to come next. Sample the distribution and feed it
+of characters that are likely to come next. Sample the distribution and feed it
 back to the RNN to get the next letter. Repeat this process until you're
 sampling text.
 {: .text-justify} 
 
 After a few trials, I settled up with using two [Long short-term memory (LSTM)](https://en.wikipedia.org/wiki/Long_short-term_memory) layers
 stacked on top of each other. These layers are uni-directional which means it has the capacity to learn from preceding 
-characters only. I stopped tuning, once I sensed some satisfactory result for this initial attempt.
+characters only. As I sensed results with human readable, spelling mistake less and poematic structure for this initial attempt, I stopped tuning.
 {: .text-justify} 
 
 ## Presentation
