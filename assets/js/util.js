@@ -1,7 +1,7 @@
 function loadModel(){
     event.preventDefault();
     document.getElementById('loadModelButt').disabled=true;
-    setStatusMessage('Please wait while loading. The model takes nearly 60sec to load.","modelLoadingOutput");
+    setStatusMessage('Please wait while loading. The model takes nearly 60sec to load for first time',"modelLoadingOutput");
     setTimeout(function () {
         var modelChoice = document.getElementById("modelChoice")
         if(modelChoice.value === ""){
