@@ -1,15 +1,24 @@
+const modelPath = "/assets/models/<MODELNAME>/model.json"
+const modelDict = {
+  "allSongs": modelPath.replace("<MODELNAME>","fullsongs_model_working"),
+  "kannadasan":modelPath.replace("<MODELNAME>","kannadasan_model"),
+  "vairamuthu":modelPath.replace("<MODELNAME>","vairamuthu_model"),
+  "vaali":modelPath.replace("<MODELNAME>","vaali_model")
+}
 function loadModel(){
     event.preventDefault();
     document.getElementById('loadModelButt').disabled=true;
-    setStatusMessage('Please wait while loading. The model takes nearly 60sec to load.","modelLoadingOutput");
+    setStatusMessage("Please wait while loading. The model takes nearly 60sec to load.","modelLoadingOutput");
+    setStatusMessage("","output");
     setTimeout(function () {
-        var modelChoice = document.getElementById("modelChoice")
+        var modelChoice = document.getElementById("modelChoice").value
+
         if(modelChoice.value === ""){
         }
         else{
-          tf.loadLayersModel('/assets/models/fullsongs_model_working/model.json').then(function(model) {
+          tf.loadLayersModel(modelDict[modelChoice]).then(function(model) {
              window.model = model;
-             setStatusMessage("Model Loaded","modelLoadingOutput");
+             setStatusMessage(modelChoice.charAt(0).toUpperCase()+modelChoice.slice(1)+" Model Loaded","modelLoadingOutput");
              document.getElementById('loadModelButt').disabled=false;
           });
         }
@@ -33,7 +42,8 @@ function generateLyrics(event){
               document.getElementById("valError").innerText = "";
               var diversity = document.getElementById("diversitySlider")
               var quantity = document.getElementById("quantity")
-              generatedString = generate_text(window.model, textbox.value, char2idx, idx2char, diversity.value, quantity.value)
+              var modelChoice = document.getElementById("modelChoice").value
+              generatedString = generate_text(window.model, textbox.value, char2idx[modelChoice], idx2char[modelChoice], diversity.value, quantity.value)
               setStatusMessage(generatedString,'output');
             }
             else{
