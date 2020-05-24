@@ -2,8 +2,8 @@
 permalink: /about/
 title: "About"
 excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
-last_modified_at: 2020-04-20T14:07:54-04:00
-
+last_modified_at: 2020-05-24T14:07:54-04:00
+toc: true
 ---
 
 <figure class="align-center">
@@ -24,3 +24,9 @@ and mentoring aspiring young students. I have given guest lectures for students 
 
 In this blog, I share my work and contemplations about artificial intelligence and machine learning.
 {: .text-justify}
+
+## Talks
+
+- Webinar on *Journey into Data Science* for students from [Ilaiyathalaimurai](http://ilaiyathalaimurai.com/) club. [Video](https://rebrand.ly/karkai_datascience)
+- Webinar on *Data Science and its applications at Automotive industry* for [RAAK College of Engineering and Technology](http://raakengg.com/), Puducherry on 2020
+- Guest lecture on *Data Science at Scania* at [Stockholm University](https://www.su.se/), Stockholm on 2018 & 2019 
