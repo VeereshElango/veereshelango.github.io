@@ -27,6 +27,8 @@ In this blog, I share my work and contemplations about artificial intelligence a
 
 ## Talks
 
+- Webinar on *Artificial Intelligence, Machine Learning & its Industrial applications* for students from [Karpagam College of Engineering](https://kce.ac.in/)
+- Webinar on *Power of Artificial Intelligence & Data Science* for students from [TJS Engineering College](http://tjsec.in/) 
 - Webinar on *Journey into Data Science* for students from [Ilaiyathalaimurai](http://ilaiyathalaimurai.com/) club. [Video](https://rebrand.ly/karkai_datascience)
 - Webinar on *Data Science and its applications at Automotive industry* for [RAAK College of Engineering and Technology](http://raakengg.com/), Puducherry on 2020
 - Guest lecture on *Data Science at Scania* at [Stockholm University](https://www.su.se/), Stockholm on 2018 & 2019 
