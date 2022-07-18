@@ -12,20 +12,20 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Veeresh Elango"
 title_separator          : "-"
-subtitle                 : "Data Scientist"# site tagline that appears below site title in masthead
+subtitle                 : "Industrial Phd Student & Data Scientist"# site tagline that appears below site title in masthead
 name                     : "Veeresh Elango"
-description              : "Data Scientist"
+description              : "Industrial Phd Student & Data Scientist"
 url                      : "https://veereshelango.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/"# the subpath of your site, e.g. "/blog"
 repository               : "VeereshElango/veereshelango.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/background-teaser.jpg"# path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/suit.jpg"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : #"/assets/images/suit.jpg"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Veeresh Elango"
   avatar           : "/assets/images/suit.jpg"
-  bio              : "Data Scientist, <br/> Developer & Coffeeholic"
+  bio              : "Industrial PhD Student <br/> & Data Scientist"
   location         : "Stockholm"
   email            : "ecveer@gmail.com"
   links:
