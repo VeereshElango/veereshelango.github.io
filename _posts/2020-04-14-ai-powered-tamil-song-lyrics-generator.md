@@ -1,7 +1,7 @@
 ---
 title: "Artificial Intelligence (AI)-powered automatic Tamil lyrics generator"
 categories:
-  - apps
+    -  apps
 tags:
   - nlp
   - text-generation
