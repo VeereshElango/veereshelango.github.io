@@ -3,7 +3,7 @@ title: Creating unique grid-id for given latitude and longitude
 excerpt: "A equation to transform latitude and longitude into unique grid-id without using any external libraries."
 comments: true
 categories:
-    - utilities
+    -  posts
 tags:
     - geo-spatial
 header:

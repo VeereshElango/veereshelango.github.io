@@ -3,7 +3,7 @@ title: How did I create my automated AI-powered Tamil lyrics generator?
 excerpt: "My story about transforming an idea to a working application using Google Colab and Tensorflow.js"
 comments: true
 categories:
-    -  Pet-project
+    -  posts
 tags:
     - nlp
     - tamil
