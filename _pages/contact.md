@@ -65,14 +65,14 @@ ul.no-bullets {
     </div>
   {% endif %}
 
-  <div class="author__content">
+  <div style="margin-top: 20px">
     {% if author.home %}
       <a href="{{ author_link }}"><h3 class="author__name" itemprop="name">{{ author.name }}</h3></a>
     {% else %}
       <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
     {% endif %}
     {% if author.bio %}
-      <div class="author__bio" itemprop="description">
+      <div class="author__bio" style="font-size: 20px;" itemprop="description">
         {{ author.bio | markdownify }}
       </div>
     {% endif %}
@@ -106,5 +106,5 @@ ul.no-bullets {
     </ul>
   </div>
   <p>
-  <a href="{{ site.url }}{{ site.baseurl }}/assets/vcard.vcf"><button class="pbutton">Save Contact</button></a></p>
+  <a href="{{ site.url }}{{ site.baseurl }}/assets/vcard.vcf?raw=1"><button class="pbutton">Save Contact</button></a></p>
 </div>
