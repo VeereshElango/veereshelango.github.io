@@ -102,7 +102,7 @@ author:
   links:
     - label: "About"
       icon: "fas fa-fw fa-user-tie"
-      url: "/about"
+      url: "/timeline"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/veereshelango/"
