@@ -8,7 +8,7 @@ categories:
 tags:
     - summer-school    
 header:
-  overlay_image: /assets/images/posts/summer-school/group_picture.jpg
+  overlay_image: /assets/images/posts/summer-school/group_picture-min.jpg
   overlay_filter: "0.5"  
 ---
 
