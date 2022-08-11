@@ -18,15 +18,14 @@ header:
 <cite> from [Pazhamozhi Naanooru](https://en.wikipedia.org/wiki/Pa%E1%B8%BBamo%E1%B8%BBi_N%C4%81%E1%B9%89%C5%AB%E1%B9%9Fu) from literature [Pathinen Keezhkanakku](https://en.wikipedia.org/wiki/Eighteen_Lesser_Texts)</cite>
  {: .small}
 
-Explanation : It is better to hear knowledgeable things from learned men (experienced) than self-learning.
 
 ## Summer School & my experience
 
-This [Vision and Sports summer school](http://cmp.felk.cvut.cz/summerschool2022/index.html) was conducted at Czech Technical University, Prague between 25-30th July, 2022. It is  sponsored by Google and endorsed by [ELLIS society](https://ellis.eu/events/vision-and-sports-summer-school-2022-in-prague) and [ELISE Consortium](https://www.elise-ai.eu/).
+This [Vision and Sports summer school](http://cmp.felk.cvut.cz/summerschool2022/index.html) was conducted at Czech Technical University, Prague between 25-30th July, 2022. It was  sponsored by Google and endorsed by [ELLIS society](https://ellis.eu/events/vision-and-sports-summer-school-2022-in-prague) and [ELISE Consortium](https://www.elise-ai.eu/).
 
-The summer school had speakers from academic as well as industries such as Google, Facebook and Valeo, covering several sub-fields of computer vision. There were nearly 50 to 60 students all over from Europe, varying from yet-to-start PhD to final year of their PhD. The uniqueness of this summer school was the fusion of (intense) sports activities at the end of everyday lecture so that every student was assigned with one sport as per their wishlist (as much as possible). This helped us to mingle and socialize.The sports activities drained the energy at the end of the day but it didn't stop us from mingling and enjoying the night life of Prague. 
+The summer school featured speakers from academia and industry, including Google, Facebook, and Valeo, covering wide range of computer vision sub-fields. Nearly 50 to 60 students participated from Europe, ranging from those who are yet to start their PhD to those who are in their final year. The unique aspect of this summer school was the fusion of (intense) sports activities with everyday lectures. Every day a different sport is assigned based on the student's wishlist which helped to mingle and socialize.  Although the sports activities exhausted our energy, we were still able to enjoy Prague's nightlife at the end of the day.
 
-I would highly recommend this summer school if you are into computer vision and like to get good insights current trends on different sub-fields of computer vision at a beautiful city.
+This summer school is highly recommended for PhD students who are interested in computer vision and wants to gain insight on current trends in different sub-fields of computer vision.
  
 If you are curious to get some short gist about different sessions of summer school, feel free to continue. 
 
@@ -39,7 +38,7 @@ This lecture started with similar image search in large scale followed by method
 ###  [Christoph Lampert](http://pub.ist.ac.at/~chl/), IST Austria
 ***Best Practice in Machine Learning for Computer Vision*** 
 <figure class="align-right" style="width: 400px">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/posts/summer-school/chris-takeaway.jpg" alt="a slide from Christoph Lampert lecture">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/posts/summer-school/chris-takeaway.JPG" alt="a slide from Christoph Lampert lecture">
   <figcaption>a slide from Christoph Lampert lecture</figcaption>
 </figure> 
 The lecture started with message of computer vision is not about winning Kaggle competitions but should perform interesting or relevant tasks. The best practices to follow on   solving a computer vision task was explained using five steps: sanity checks, defining the problem, collect and annotate data, model training and model evaluation. Also the best practices to follow on scientific scrutiny was also discussed. Finally wrapped with nice take home messages which I like.
@@ -55,7 +54,7 @@ The lecture starts with the introduction about mad progress of the community in 
 ***Self-Supervised learning, Contrastive learning, Vision Language models, Multi-modal Learning***
 
 <figure class="align-right" style="width: 400px">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/posts/summer-school/multimodallearning.jpg" alt="a slide from Hilde Kuehne lecture">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/posts/summer-school/multimodallearning.JPG" alt="a slide from Hilde Kuehne lecture">
   <figcaption>a slide from Hilde Kuehne lecture</figcaption>
 </figure> 
 This is my favourite lecture of the summer school as the topics were highly interesting as well as enlightening. The lecture started with types of self-supervised learning such as by colorization, context structure, jigsaw puzzle and clustering. Then moved on to contrastive learning where topics like ranking loss, pairwise/contrastive loss, distance metrics were discussed along with how contrastive loss could be used for self-supervised learning. Then the techniques, importance and latest SOTA on vision language models were briefly talked through. "Multi-modal Learning - the watercooler of AI (speech, vision, nlp, ml theory)" fun and interesting way to introduce this topic. It was interesting to hear how multi-modal learning help us to learn feature representation without human annotated data and several applications of them in cross-modal learning. 
