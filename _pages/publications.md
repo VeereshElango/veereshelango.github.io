@@ -6,7 +6,7 @@ title: "Publications"
 ---
 
 [ERAIVA – a software for video-based musculoskeletal risk assessment  ](https://drive.google.com/file/d/1j_0a90WEldquzQxDIQYBlJ5pIPeUR6dF/view?usp=drive_link)
-:   *Veeresh Elango, Staffan, Hedelin,- Lars Hanson, Mikael Forsman, Anna Syberfeldt, Johan Sandblad*
+:   *Veeresh Elango, Staffan Hedelin, Lars Hanson, Mikael Forsman, Anna Syberfeldt, Johan Sandblad*
 :   *Nordic Ergonomic Society 2023*
 
 
