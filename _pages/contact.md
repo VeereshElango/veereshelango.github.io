@@ -80,6 +80,12 @@ ul.no-bullets {
   <div style="margin: 24px 0;">
     <ul class="no-bullets">
         <li>
+            <a href="mailto:veeresh.elango@scania.com" rel="nofollow noopener noreferrer">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span class="plabel">Email</span>
+            </a>
+        </li>
+        <li>
             <a href="https://wa.me/+919976043695" rel="nofollow noopener noreferrer">
                 <i class="fab fa-fw fa-whatsapp" aria-hidden="true"></i>
                 <span class="plabel">Whatsapp</span>
@@ -95,12 +101,6 @@ ul.no-bullets {
             <a href="https://twitter.com/veereshelango" rel="nofollow noopener noreferrer">
                 <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
                 <span class="plabel">Twitter</span>
-            </a>
-        </li>
-        <li>
-            <a href="https://facebook.com/veereshelango" rel="nofollow noopener noreferrer">
-                <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i>
-                <span class="plabel">Facebook</span>
             </a>
         </li>
     </ul>
