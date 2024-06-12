@@ -4,7 +4,7 @@ classes : wide
 title: "Publications"
 
 ---
-[Multi-Objective Optimization of an Assembly Layout Using Nature-Inspired Algorithms and a Digital Human Modeling Tool (https://www.tandfonline.com/doi/full/10.1080/24725838.2024.2362726)
+[Multi-Objective Optimization of an Assembly Layout Using Nature-Inspired Algorithms and a Digital Human Modeling Tool](https://www.tandfonline.com/doi/full/10.1080/24725838.2024.2362726)
 :   *Andreas Lind, Veeresh Elango, Lars Hanson, Dan Högberg, Dan Lämkull, Pär Mårtensson and Anna Syberfeldt*
 :   *IISE Transactions on Occupational Ergonomics and Human Factors, 1–14, 2024.*
 
