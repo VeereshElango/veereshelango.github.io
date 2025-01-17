@@ -4,6 +4,11 @@ classes : wide
 title: "Publications"
 
 ---
+[Evaluating ERAIVA - a software for video-based awkward posture identification](https://dx.doi.org/10.1504/IJHFE.2024.143861)
+:  *Veeresh Elango, Staffan Hedelin, Lars Hanson, Johan Sandblad, Anna Syberfeldt and Mikael Forsman*
+:  *International Journal of Human Factors and Ergonomics, 11(6), 1–16, 2024*.
+
+
 [Multi-Objective Optimization of an Assembly Layout Using Nature-Inspired Algorithms and a Digital Human Modeling Tool](https://www.tandfonline.com/doi/full/10.1080/24725838.2024.2362726)
 :   *Andreas Lind, Veeresh Elango, Lars Hanson, Dan Högberg, Dan Lämkull, Pär Mårtensson and Anna Syberfeldt*
 :   *IISE Transactions on Occupational Ergonomics and Human Factors, 1–14, 2024.*
