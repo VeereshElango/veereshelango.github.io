@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -75,7 +75,7 @@ facebook:
   username               : "veereshelango"
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/suit.jpg"# Open Graph/Twitter default site image
+og_image                 : "/assets/images/profile_pics/profile-pic-casual.png # suit.jpg"# Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Veeresh Elango"
-  avatar           : "/assets/images/suit.jpg"
+  avatar           : "/assets/images/profile_pics/profile-pic-casual.png"
   bio              : "Industrial PhD Student <br/> & Data Scientist"
   location         : "Stockholm"
   email            : "ecveer@gmail.com"
