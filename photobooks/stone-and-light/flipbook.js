@@ -12,6 +12,8 @@ const pageFlip = new St.PageFlip(bookElement, {
   width: pageWidth,
   height: pageHeight,
   size: "stretch",
+  // minWidth also sets PageFlip's portrait threshold (container < 2 × minWidth).
+  // The inline min-size it applies is overridden in styles.css so phones can shrink the leaf.
   minWidth: Math.max(1, Math.round(pageWidth * 0.95)),
   maxWidth: Math.max(1, Math.round(pageWidth * 4)),
   minHeight: Math.max(1, Math.round(pageHeight * 0.5)),
@@ -30,6 +32,11 @@ const pageFlip = new St.PageFlip(bookElement, {
   showPageCorners: true,
   disableFlipByClick: false,
 });
+
+if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+  const hint = document.querySelector(".status small");
+  if (hint) hint.textContent = "Swipe or tap the page edge to turn";
+}
 
 let currentPage = 0;
 let isTurning = false;

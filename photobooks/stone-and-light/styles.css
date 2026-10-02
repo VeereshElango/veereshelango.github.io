@@ -28,7 +28,25 @@ button { color: inherit; font: inherit; }
 .status span { font: 400 10px/1.4 var(--book-sans); letter-spacing: .04em; color: #9aa093; }
 .status small { font: 400 9px/1.4 var(--book-sans); color: #6d7268; }
 a:focus-visible, button:focus-visible { outline: 2px solid #9aa093; outline-offset: 4px; }
-@media (max-width: 700px) { .room { padding: 16px 9px; } .book-header { grid-template-columns: 1fr auto; } .book-header h1 { font-size: 13px; } .book-header #orientation { display: none; } }
+.book { min-width: 0 !important; min-height: 0 !important; touch-action: pan-y pinch-zoom; -webkit-tap-highlight-color: transparent; }
+@media (max-width: 700px) {
+  .room { --chrome: 132px; padding: max(12px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left)); }
+  .book-header { grid-template-columns: auto minmax(0, 1fr); gap: 12px; }
+  .book-header h1 { overflow: hidden; font-size: 15px; text-align: right; text-overflow: ellipsis; white-space: nowrap; }
+  .book-header a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+  .book-header #orientation { display: none; }
+  .controls { grid-template-columns: 46px 1fr 46px; gap: 12px; width: min(100%, 340px); }
+  .controls button { width: 44px; height: 44px; font-size: 18px; }
+  .status span { font-size: 13px; }
+  .status small { font-size: 11px; }
+}
+/* Phone landscape: little vertical room, so slim the header and controls. */
+@media (max-height: 500px) and (orientation: landscape) {
+  .room { --chrome: 96px; padding: 6px max(12px, env(safe-area-inset-right)) 6px max(12px, env(safe-area-inset-left)); }
+  .book-header a { min-height: 32px; }
+  .stage { padding: 2px 0; }
+  .status small { display: none; }
+}
 /* Below this envelope PageFlip shows one leaf, so the rig is sized for one leaf.
    The thresholds mirror the point where a spread would fall under its minimum. */
 @media (max-width: 909px), (max-height: 711px) {
