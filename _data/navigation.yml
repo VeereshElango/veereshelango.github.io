@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Photobooks"
+    url: /photobooks/
   - title: "Publications"
     url: /publications/
   - title: "Blog"

@@ -1,0 +1,124 @@
+﻿@font-face{font-family:"Source Serif 4";src:url("fonts/SourceSerif4-Regular.otf.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("fonts/SourceSerif4-It.otf.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+:root{--paper:#f7f6f0;--ink:#292c26;--cloth:#7d8572;--book-serif:"Source Serif 4","Songti SC","Noto Serif CJK SC",Georgia,serif;--book-sans:Arial,Helvetica,sans-serif}
+.art-page{container-type:inline-size;position:relative;aspect-ratio:var(--page-ratio, .8);overflow:hidden;background:var(--paper) url("paper-grain.svg") repeat;color:var(--ink);font-family:var(--book-serif);font-weight:400}
+.art-page img{display:block;object-fit:contain;filter:none;border:0;border-radius:0;box-shadow:none}
+.art-page .plate{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:74%;height:72%;margin:0;display:flex;align-items:center;justify-content:center}
+.art-page .plate img{width:100%;height:100%;object-fit:contain}
+.art-page .plate.small{width:49%;height:53%}
+.art-page .plate.medium{width:68%;height:65%}
+.art-page .plate.large{width:86%;height:82%}
+.art-page .plate.portrait{width:67%;height:66%}
+.art-page .plate.high{top:40%}
+.art-page .plate.low{top:55%}
+.art-page .plate.aside{left:55%}
+.art-page .folio{position:absolute;bottom:4.7%;right:7.7%;margin:0;color:#73766c;font:400 1.5cqw/1 var(--book-serif);letter-spacing:0;text-transform:none}
+.art-page.verso .folio{left:7.7%;right:auto}
+.art-page.endpaper{background-color:#e9e9dc}
+.art-page.cloth{background:var(--cloth) url("cloth-weave.svg") repeat;color:#f2efdf}
+.art-page .cover-title{position:absolute;left:13.5%;right:10%;top:15%;margin:0;font:400 7.2cqw/1.12 var(--book-serif);letter-spacing:-.02em;text-shadow:0 1px 0 rgb(29 39 25 / 12%)}
+.art-page .cover-subtitle{position:absolute;left:13.5%;top:33%;font:400 2.1cqw/1.4 var(--book-serif);margin:0;letter-spacing:.025em}
+.art-page .cover-plate{position:absolute;left:13.5%;bottom:18%;width:52%;margin:0;box-shadow:0 1px 1px rgb(24 33 20 / 18%)}
+.art-page .cover-plate img{width:100%;height:auto}
+.art-page .cover-foot{position:absolute;bottom:7%;left:13.5%;font:400 1.6cqw/1.4 var(--book-sans);letter-spacing:.13em}
+.art-page .title-block{position:absolute;top:26%;left:16%;right:12%}
+.art-page .title-block h2{font:400 4.5cqw/1.2 var(--book-serif);letter-spacing:-.01em;margin:0 0 6cqw}
+.art-page .title-block p{font:400 2.1cqw/1.6 var(--book-serif);margin:0}
+.art-page .colophon{position:absolute;left:16%;right:18%;top:52%;font:400 2.2cqw/1.55 var(--book-serif)}
+.art-page .colophon p{margin:0 0 4cqw}
+.art-page .colophon .small-print{font:400 1.7cqw/1.65 var(--book-sans);color:#6f7268}
+.art-page .back-mark{position:absolute;bottom:10%;left:13.5%;font:400 2cqw/1.4 var(--book-serif)}
+/* The material is a background, so it never changes the photograph's pixels. */
+.book-page.art-page::after{content:none}
+.book-page.art-page.--left::before{background:linear-gradient(to left,rgb(28 30 24 / 12%),rgb(28 30 24 / 3%) 40%,transparent)}
+.book-page.art-page.--right::before{background:linear-gradient(to right,rgb(28 30 24 / 12%),rgb(28 30 24 / 3%) 40%,transparent)}
+
+/* ---- Photobook layer: plates sized from the source proportions ---- */
+.art-page .plate{width:auto;height:auto;inset:0;left:0;top:0;transform:none;position:absolute;display:flex;align-items:center;justify-content:center;padding:9% 11% 12%}
+.art-page .plate img{width:100%;height:100%;object-fit:contain;object-position:center}
+/* Tall 9:16 frames earn nearly the whole leaf; wide frames stay a quiet band. */
+.art-page .plate.tall{padding:7% 10% 10%}
+.art-page .plate.tall.hero{padding:4.5% 5% 7%}
+.art-page .plate.tall.quiet{padding:13% 20% 16%}
+.art-page .plate.upright{padding:10% 12% 13%}
+.art-page .plate.upright.hero{padding:6% 6% 9%}
+.art-page .plate.upright.quiet{padding:16% 20% 19%}
+.art-page .plate.wide{padding:10% 6% 12%}
+.art-page .plate.wide.hero{padding:7% 2.5% 9%}
+.art-page .plate.wide.quiet{padding:14% 16% 16%}
+.art-page .chapter{position:absolute;left:14%;right:14%;top:34%}
+.art-page .chapter-number{margin:0 0 2.6cqw;font:400 1.7cqw/1.4 var(--book-sans);letter-spacing:.24em;text-transform:uppercase;color:#8a8d80}
+.art-page .chapter h2{margin:0 0 5cqw;font:400 8.4cqw/1.05 var(--book-serif);letter-spacing:-.025em}
+.art-page .chapter-text{margin:0;font:400 2.5cqw/1.62 var(--book-serif);font-style:italic;color:#4a4d44}
+.art-page .cover-title{top:17%;font-size:8.6cqw}
+.art-page .cover-subtitle{top:40%;font-size:2.4cqw}
+
+
+/* ---- Immersive dark palette: the room recedes so the photographs carry the light ---- */
+:root{--paper:#191a17;--ink:#e7e4d9;--cloth:#14231a;--room:#0b0c0a;--muted:#8d9187;--tri-green:#2f7d4f;--tri-white:#f2efe4;--tri-red:#c3352f}
+.art-page{background-color:var(--paper);color:var(--ink)}
+.art-page.endpaper{background-color:#0f100e}
+.art-page .folio,.art-page .credit{color:var(--muted)}
+.art-page .colophon .small-print{color:#8d9187}
+.art-page .chapter-number{color:var(--muted)}
+.art-page .chapter-text{color:#bdbcb0}
+/* Photographs sit on a hairline of their own so the frame reads against dark stock. */
+.art-page .plate img{box-shadow:0 0 0 1px rgb(231 228 217 / 9%),0 18px 36px rgb(0 0 0 / 45%)}
+.book-page.art-page.--left::before{background:linear-gradient(to left,rgb(0 0 0 / 55%),rgb(0 0 0 / 16%) 42%,transparent)}
+.book-page.art-page.--right::before{background:linear-gradient(to right,rgb(0 0 0 / 55%),rgb(0 0 0 / 16%) 42%,transparent)}
+
+/* ---- Photographer credit, carried quietly on every leaf ---- */
+.art-page .credit{position:absolute;bottom:4.7%;left:7.7%;margin:0;font:400 1.25cqw/1 var(--book-sans);letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.art-page.verso .credit{left:auto;right:7.7%}
+
+/* ---- Tricolour rule: a small Italian accent, used only on openings and covers ---- */
+.tricolour{display:block;width:16%;height:.62cqw;margin:0 0 3.4cqw;background:linear-gradient(to right,var(--tri-green) 0 33.33%,var(--tri-white) 33.33% 66.66%,var(--tri-red) 66.66% 100%)}
+.art-page .chapter .tricolour{width:13%}
+
+/* ---- Covers ---- */
+.art-page.cloth{background-color:var(--cloth)}
+.art-page.cover{padding:0}
+.art-page .cover-art{position:absolute;inset:0;margin:0;overflow:hidden}
+.art-page .cover-art img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.art-page .cover-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgb(7 11 9 / 78%) 0 34%,rgb(7 11 9 / 30%) 56%,rgb(7 11 9 / 82%) 100%)}
+.art-page .cover-band{position:absolute;left:0;top:0;bottom:0;width:1.5%;background:linear-gradient(to bottom,var(--tri-green) 0 33.33%,var(--tri-white) 33.33% 66.66%,var(--tri-red) 66.66% 100%);opacity:.92}
+.art-page .cover-title{top:8.5%;color:#f4f1e6;text-shadow:0 2px 14px rgb(0 0 0 / 55%)}
+.art-page .cover-subtitle{top:31%;color:#e2e0d2;text-shadow:0 1px 10px rgb(0 0 0 / 55%)}
+.art-page .cover-rule{position:absolute;left:13.5%;top:27%;width:14%;height:.55cqw;background:linear-gradient(to right,var(--tri-green) 0 33.33%,var(--tri-white) 33.33% 66.66%,var(--tri-red) 66.66% 100%)}
+.art-page .cover-by{position:absolute;left:13.5%;bottom:11.5%;margin:0;font:400 2.5cqw/1.3 var(--book-serif);color:#f2efe4;text-shadow:0 1px 10px rgb(0 0 0 / 6%)}
+.art-page .cover-by span{display:block;font:400 1.5cqw/1.4 var(--book-sans);letter-spacing:.2em;text-transform:uppercase;color:#c6c7ba;margin-bottom:1.2cqw}
+.art-page .cover-foot{bottom:6.5%;color:#b9bbae}
+.art-page .back-mark{bottom:auto;top:16%;color:#e7e4d9}
+.art-page .back-by{position:absolute;left:13.5%;bottom:13%;margin:0;font:400 2.3cqw/1.5 var(--book-serif);color:#e7e4d9}
+.art-page .back-by span{display:block;font:400 1.45cqw/1.4 var(--book-sans);letter-spacing:.2em;text-transform:uppercase;color:#9aa093;margin-bottom:1.1cqw}
+.art-page.cloth .tricolour{width:18%;position:absolute;left:13.5%;bottom:7.5%;margin:0}
+.art-page .title-block .by,.art-page .colophon .by{margin:5cqw 0 4cqw;font:400 3.1cqw/1.3 var(--book-serif);color:var(--ink)}
+.art-page .colophon .by{font-size:2.7cqw}
+.art-page .title-block .by span,.art-page .colophon .by span{display:block;margin-bottom:1.3cqw;font:400 1.45cqw/1.4 var(--book-sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.art-page .title-block .tricolour,.art-page .colophon .tricolour{width:12%}
+.art-page .colophon{top:40%}
+
+/* Credit sits on the outer edge of each leaf and the folio turns inward, so a
+   spread shows the photographer's name at both fore-edges rather than doubled at the gutter. */
+.art-page .credit{left:auto;right:7.7%;color:#b5b8aa;opacity:1;font-size:1.3cqw}
+.art-page.verso .credit{left:7.7%;right:auto}
+.art-page .folio{left:7.7%;right:auto;color:#7e8278}
+.art-page.verso .folio{left:auto;right:7.7%}
+.art-page .cover-scrim{background:linear-gradient(180deg,rgb(7 11 9 / 80%) 0 30%,rgb(7 11 9 / 26%) 52%,rgb(7 11 9 / 72%) 82%,rgb(7 11 9 / 92%) 100%)}
+.art-page .cover-band{width:1.25%;opacity:.86}
+
+/* Reserve a clear band at the foot of every leaf for the credit and folio. */
+.art-page .plate{padding-bottom:13%}
+.art-page .plate.tall{padding-bottom:11.5%}
+.art-page .plate.tall.hero{padding-bottom:11%}
+.art-page .plate.tall.quiet{padding-bottom:16%}
+.art-page .plate.upright{padding-bottom:13.5%}
+.art-page .plate.upright.hero{padding-bottom:11.5%}
+.art-page .plate.upright.quiet{padding-bottom:19%}
+.art-page .plate.wide{padding-bottom:12%}
+.art-page .plate.wide.hero{padding-bottom:11.5%}
+.art-page .plate.wide.quiet{padding-bottom:16%}
+
+/* A box-shadow would trace the plate box, not the letterboxed photograph, so the
+   lift and hairline are drawn with filters that follow the painted image edge. */
+.art-page .plate img{box-shadow:none;filter:drop-shadow(0 0 1px rgb(231 228 217 / 24%)) drop-shadow(0 16px 30px rgb(0 0 0 / 55%))}
