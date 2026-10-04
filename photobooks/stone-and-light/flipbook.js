@@ -41,6 +41,25 @@ if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
 let currentPage = 0;
 let isTurning = false;
 
+// Photos carry data-src/data-srcset; load only the leaves around the open page so
+// a 50-photo book doesn't download everything up front (PageFlip stacks all
+// leaves on screen, so native loading="lazy" can't tell them apart).
+const PRELOAD_BEHIND = 2;
+const PRELOAD_AHEAD = 5;
+function hydrateAround(index) {
+  const from = Math.max(0, index - PRELOAD_BEHIND);
+  const to = Math.min(pages.length - 1, index + PRELOAD_AHEAD);
+  for (let i = from; i <= to; i += 1) {
+    pages[i].querySelectorAll("img[data-src]").forEach((img) => {
+      // Setting src as well as srcset makes Chrome fetch both, so src is only a fallback.
+      if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+      else img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+      img.removeAttribute("data-srcset");
+    });
+  }
+}
+
 function updateControls() {
   const pageCount = pageFlip.getPageCount();
   const lastPage = pageCount - 1;
@@ -60,6 +79,7 @@ function updateControls() {
 
 pageFlip.on("flip", (event) => {
   currentPage = Number(event.data);
+  hydrateAround(currentPage);
   updateControls();
 });
 
@@ -81,7 +101,10 @@ updateControls();
 
 const requestedPage = Number(new URLSearchParams(location.search).get("page"));
 if (Number.isInteger(requestedPage) && requestedPage >= 0 && requestedPage < pages.length) {
+  hydrateAround(requestedPage);
   pageFlip.turnToPage(requestedPage);
+} else {
+  hydrateAround(0);
 }
 
 previousButton.addEventListener("click", () => {

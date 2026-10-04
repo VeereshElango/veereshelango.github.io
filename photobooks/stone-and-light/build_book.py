@@ -17,6 +17,8 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent
 PHOTOS = ROOT / "assets" / "photos"
+# Produced by scripts/optimize_photos.py at the repository root.
+SMALL_PHOTOS = ROOT / "assets" / "photos-1200"
 
 PAGE_WIDTH = 460
 PAGE_HEIGHT = 640
@@ -177,14 +179,50 @@ def plate_class(path: Path, emphasis: str) -> str:
     return f"plate {shape} {emphasis}"
 
 
+# Largest plate box per shape (the "hero" paddings in style/book-style.css), as
+# (box width, vertical padding) in page widths; CSS % padding is width-relative.
+PLATE_BOX = {"wide": (0.95, 0.185), "upright": (0.88, 0.175), "tall": (0.90, 0.155)}
+
+
+def width_fraction(width: int, height: int, shape: str) -> float:
+    """Share of the page width a contained photo occupies at most."""
+    box_width, vertical_padding = PLATE_BOX[shape]
+    box_height = PAGE_HEIGHT / PAGE_WIDTH - vertical_padding
+    return min(box_width, box_height * width / height)
+
+
+def photo_attrs(city: str, name: str, fraction: float = 1.0, defer: bool = True) -> str:
+    """Image attributes; deferred ones are hydrated near the open page by flipbook.js."""
+    large = f"assets/photos/{city}/{name}"
+    with Image.open(PHOTOS / city / name) as image:
+        large_width, large_height = image.size
+    dims = f'width="{large_width}" height="{large_height}"'
+    prefix = "data-" if defer else ""
+    small_path = SMALL_PHOTOS / city / name
+    if not small_path.exists():
+        return f'{prefix}src="{html.escape(large)}" {dims}'
+    with Image.open(small_path) as image:
+        small_width = image.width
+    small = f"assets/photos-1200/{city}/{name}"
+    # Slot width per layout (see styles.css): one page fills a narrow screen; on short
+    # screens the page is height-bound (~60vh wide); otherwise a spread shows half each.
+    sizes = f"(max-width: 909px) {fraction * 100:.0f}vw, (max-height: 711px) {fraction * 60:.0f}vh, {fraction * 50:.0f}vw"
+    return (
+        f'{prefix}src="{html.escape(large)}" '
+        f'{prefix}srcset="{html.escape(small)} {small_width}w, {html.escape(large)} {large_width}w" '
+        f'sizes="{sizes}" {dims}'
+    )
+
+
 def photo_page(entry: tuple[str, str, str], side: str, folio: int) -> str:
     city, name, emphasis = entry
-    src = f"assets/photos/{city}/{name}"
     alt = html.escape(ALT_TEXT.get(name, f"Photograph from {city}"))
     cls = plate_class(PHOTOS / city / name, emphasis)
+    with Image.open(PHOTOS / city / name) as image:
+        fraction = width_fraction(*image.size, cls.split()[1])
     return (
         f'<article class="book-page art-page paper {side}" aria-label="{city} photograph {folio}">'
-        f'<figure class="{cls}"><img src="{html.escape(src)}" alt="{alt}" loading="lazy" decoding="async"></figure>'
+        f'<figure class="{cls}"><img {photo_attrs(city, name, fraction)} alt="{alt}" decoding="async"></figure>'
         f'<p class="credit">{PHOTOGRAPHER}</p>'
         f'<p class="folio">{city} · {folio:02d}</p>'
         f"</article>"
@@ -221,7 +259,7 @@ def build_pages() -> list[str]:
     cover_alt = html.escape(ALT_TEXT[name])
     pages.append(
         '<article class="book-page art-page cloth cover recto" data-density="hard" aria-label="Front cover">'
-        f'<figure class="cover-art"><img src="assets/photos/{city}/{html.escape(name)}" alt="{cover_alt}"></figure>'
+        f'<figure class="cover-art"><img {photo_attrs(city, name, defer=False)} alt="{cover_alt}" fetchpriority="high"></figure>'
         '<span class="cover-scrim" aria-hidden="true"></span>'
         '<span class="cover-band" aria-hidden="true"></span>'
         f'<h2 class="cover-title">{TITLE}</h2>'
