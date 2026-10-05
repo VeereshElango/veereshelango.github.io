@@ -77,7 +77,7 @@ Simone Calderara introduced task vectors as a way to combine or modify learned c
 
 Vittorio Murino showed how a model can learn shortcuts from its training data and then struggle when those patterns change. The paper [Distributionally Robust Neural Networks for Group Shifts](https://openreview.net/forum?id=ryxGuJrFvS) is one example of research into performance under these shifts. A high score on familiar data does not necessarily mean a model will work well in a new setting. Testing across different groups and conditions is an important part of evaluating robustness.
 
-**[Iacopo Masi](https://iacopomasi.github.io/) — Robust classifiers and energy-based models**
+**[Lacopo Masi](https://iacopomasi.github.io/) — Robust classifiers and energy-based models**
 
 Iacopo Masi connected adversarial robustness with energy-based views of classifiers. The lecture explored how this perspective can link classification with inversion, generation and ways of examining model predictions. It offered an interesting way to think about what a model considers plausible, beyond simply looking at its final label.
 
