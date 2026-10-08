@@ -1,12 +1,15 @@
 ---
 title: "VISMAC 2026: A Week of Machine Vision in Siena"
-excerpt: "A short summary of the VISMAC 2026 summer school and some of my takeaways"
+excerpt: "Highlights and takeaways from VISMAC 2026, a machine vision summer school in Siena covering 3D vision, video, physical AI and trustworthy AI."
+description: "My takeaways from VISMAC 2026 in Siena, Italy: machine vision lectures on 3D vision, video understanding, physical AI, generative models and trustworthy AI."
 comments: true
 classes: wide
 categories:
   - posts
 tags:
   - summer-school
+  - machine-vision
+  - computer-vision
 header:
   overlay_image: /assets/images/posts/vismac-2026/SienaTower.jpg
   overlay_filter: "0.5"
